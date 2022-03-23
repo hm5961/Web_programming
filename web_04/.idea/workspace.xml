@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b74ce0c-019d-40e9-a0f7-8261f8046f83" name="변경" comment="" />
+    <list default="true" id="2b74ce0c-019d-40e9-a0f7-8261f8046f83" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/homepage/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/android_studio.png" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/android_studio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/final practice.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/final practice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/git.png" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/git.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/html.png" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/html.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/mysql.png" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/mysql.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/spaniel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/spaniel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/spring_boot.png" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/back/spring_boot.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="프로젝트" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -49,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\Web_programming\web_04\homepage\back" />
       <recent name="C:\Users\김현민\Documents\GitHub\Web_programming\web_04" />
     </key>
   </component>
@@ -62,10 +74,22 @@
       <updated>1647826086461</updated>
       <workItem from="1647826088328" duration="4732000" />
       <workItem from="1648004947185" duration="5664000" />
+      <workItem from="1648026066278" duration="8694000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

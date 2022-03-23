@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Homepage</title>
+    <style>
+        html {
+            background: #333333;
+            color: #ffffff;
+        }
+
+        html.white {
+            background: #ffffff;
+            color: #000000;
+        }
+        div.top_left{
+            float: left;
+
+        }
+        td{
+            font-size: 10px;
+        }
+        th{
+            font-size: 12px;
+        }
+        a{
+            text-decoration: none;
+            color: #888888;
+        }
+        a.white{
+            text-decoration: none;
+            color: #000000;
+        }
+        .thing {
+            position: relative;
+            left: 50px;
+        }
+        .thing2 {
+            opacity: 0;
+            position: absolute;
+            left: 336px;
+            top: 86px;
+        }
+        .m-fadeOut {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s linear 300ms, opacity 300ms;
+
+            box-sizing: border-box;
+
+        }
+        .m-fadeIn {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s linear 0s, opacity 300ms;
+
+            box-sizing: border-box;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My Homepage</h1>
+
+    <div class="top_left"> <!--top left-->
+        <p>
+            <img src="spaniel.jpg" width = "100" height = "100" alt="dog/spaniel">
+            <br>CBNU Software Engneering 3rd Grade
+            <br>trying to be a back-end developer
+        <br>
+            <a href="https://github.com/hm5961?tab=wrepositories" targer="_self">
+                <img src="git.png" width = "30" height="30" alt="git_icon">
+                My Github site
+                <sub>
+                    (link)
+                </sub>
+            </a>
+        <br>
+        <button id="tog">change music video</button>
+        <button id="toggleTheme">toggle Theme</button>
+    </div>
+        <div id="thing" class="thing">
+            <iframe position=""width="410" height="230" src="https://www.youtube.com/embed/3jHr5JbTeRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfulslscreen></iframe>
+            <br>
+        </div>
+        <div id="thing2" class="thing thing2">
+            <iframe width="410" height="230"  src="https://www.youtube.com/embed/63pBC-nBZEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+        </div>
+
+    <hr>
+        <h3>Now I Studying</h3>
+        <ul>
+            <li>Personal
+                <ol>
+                    <li><img src="spring_boot.png" width = "30" height="30" alt="Springboot_icon">Java Springboot</li>
+                    <li><img src="mysql.png" width = "30" height="30" alt="Mysql_icon">MySQL</li>
+                </ol>
+            </li>
+            <li>University
+                <ol>
+                    <li><img src="android_studio.png" width = "30" height="30" alt="android_studio_icon">Android Studio</li>
+                    <li><img src="html.png" width="30" height="30" alt="html_icon"> HTML</li>
+                </ol>
+            </li>
+        </ul>
+    <hr>
+        <h3>Timetable for this semester</h3>
+        <table border = "1" width = "400">
+            <tr>
+                <th colspan="6">시간표</th>
+            </tr>
+            <tr align="center" height = "10">
+                <th></th>
+                <th width="120">월</th>
+                <th width="120">화</th>
+                <th width="120">수</th>
+                <th width="120">목</th>
+                <th width="120">금</th>
+            </tr>
+            <tr>
+                <td height="40">09</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr valign="top">
+                <td valign="middle" height="40">10</td>
+                <td rowspan="2" bgcolor="#dc143c">오픈소스<br>웹 소프트웨어<br>S4-1-205</td>
+                <td rowspan="2" bgcolor="#f9c700">객체지향설계<br>S4-1-204</td>
+                <td rowspan="2" bgcolor="#1010e5">컴파일러<br>S4-1-106</td>
+                <td bgcolor="#48e5b4">컴퓨터네트워크<br>S4-1-106</td>
+                <td rowspan="2" bgcolor="#28b051">운영체제<br>S4-1-104</td>
+            </tr>
+            <tr>
+                <td height="40">11</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td height="40">12</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr valign="top">
+                <td valign="middle" height="40">13</td>
+                <td></td>
+                <td></td>
+                <td rowspan="4" bgcolor="#f99c2d">오픈소스<br>전문프로젝트<br>S4-1-204</td>
+                <td rowspan="2" bgcolor="#a000f9">창업기획<br>E9-105F</td>
+                <td rowspan="2" bgcolor="#dc143c">오픈소스<br>웹 소프트웨어<br>S4-1-102</td>
+            </tr>
+            <tr valign="top">
+                <td valign="middle" height="40">14</td>
+                <td></td>
+                <td bgcolor="#28b051">운영체제<br>S4-1-104</td>
+            </tr>
+            <tr valign="top">
+                <td valign="middle" height="40">15</td>
+                <td></td>
+                <td rowspan="2" bgcolor="#48e5b4">컴퓨터네트워크<br>S4-1-106</td>
+                <td rowspan="2" bgcolor="#1010e5">컴파일러<br>S4-1-206</td>
+                <td></td>
+            </tr>
+            <tr valign="top">
+                <td valign="middle" height="40">16</td>
+                <td rowspan="2" bgcolor="#f9c700" >객체지향설계<br>S4-1-102</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td height="40">17</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+</body>
+</html>
+<script>
+    var tog = document.getElementById("tog");
+    var thing = document.getElementById("thing");
+    var thing2 = document.getElementById("thing2");
+
+    tog.addEventListener("click", function() {
+
+        thing.classList.toggle("m-fadeOut");
+        thing2.classList.toggle("m-fadeIn");
+
+    });
+
+    document.getElementById("toggleTheme").addEventListener("click",() => {
+        document.documentElement.classList.toggle("white")
+    })
+</script>
