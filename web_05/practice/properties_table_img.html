@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+        th{
+            border-style: solid;
+            border-color: blueviolet;
+        }
+        .leo{
+            background: url("leopardskin.jpg");
+            color: white;
+            font-family: 'Rock Salt', cursive;
+            text-shadow: 3px 3px 3px black;
+        }
+        tr.lrb{
+            border-style: solid;
+            border-left-size: 1px;
+            border-right-size: 1px;
+            border-left-color: blueviolet;
+            border-right-color: blueviolet;
+            border-top: none;
+            border-bottom: none;
+            font-family: "Times New Roman";
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .ta1{
+            text-align: right;
+        }
+        .ta2{
+            text-align: left;
+        }
+    tr:nth-child(even)
+    {
+        background-color: #ff33cc;
+    }
+    tr:nth-child(odd)
+    {
+        background-color: #e495e4;
+    }
+    </style>
+</head>
+<body>
+<table width="500px", height="400px">
+    <tr class="leo">
+        <th>Band</th>
+        <th>Year formed</th>
+        <th>No. of Albums</th>
+        <th>Most Famous song</th>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Buzz</td>
+        <td>1976</td>
+        <td>9</td>
+        <td>Ever</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">The</td>
+        <td>1976</td>
+        <td>6</td>
+        <td>London</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Damned</td>
+        <td>1976</td>
+        <td>10</td>
+        <td>Smash</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Pistols</td>
+        <td>1975</td>
+        <td>1</td>
+        <td>UK</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Sham</td>
+        <td>1976</td>
+        <td>13</td>
+        <td>Kids</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Banshees</td>
+        <td>1976</td>
+        <td>11</td>
+        <td>Hong Kong</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Fingers</td>
+        <td>1977</td>
+        <td>10</td>
+        <td>Device</td>
+    </tr>
+    <tr class="lrb">
+        <td class="bold">Strangers</td>
+        <td>1974</td>
+        <td>17</td>
+        <td>Heroes</td>
+    </tr>
+    <tr class="leo">
+        <th colspan="2" class="ta1">Total albums</th>
+        <th colspan="2" class="ta2">77</th>
+    </tr>
+</table>
+</body>
+</html>

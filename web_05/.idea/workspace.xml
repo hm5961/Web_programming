@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b74ce0c-019d-40e9-a0f7-8261f8046f83" name="변경" comment="" />
+    <list default="true" id="f39e9249-efd3-4c85-a1f7-55b7fc049c07" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +31,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26fsg5xitK8j5C6hVu4M9bzkt0l" />
+  <component name="ProjectId" id="26zbg53RMsEEsp9Q7EdkDgaM8Ui" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,27 +42,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="프로젝트" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\김현민\Documents\GitHub\Web_programming\web_04" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="2b74ce0c-019d-40e9-a0f7-8261f8046f83" name="변경" comment="" />
-      <created>1647826086461</created>
+      <changelist id="f39e9249-efd3-4c85-a1f7-55b7fc049c07" name="변경" comment="" />
+      <created>1648429474330</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647826086461</updated>
-      <workItem from="1647826088328" duration="4732000" />
-      <workItem from="1648004947185" duration="5664000" />
-      <workItem from="1648429374669" duration="97000" />
+      <updated>1648429474330</updated>
+      <workItem from="1648429476025" duration="5866000" />
     </task>
     <servers />
   </component>
