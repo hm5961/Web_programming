@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+
+
+    /* 창 크기 클 때 */
+    @media screen and (min-width: 990px) {
+        .top{
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            top: 0%;
+            left: 0%;
+            background-color: cornflowerblue;
+        }
+        .right_high{
+            position: absolute;
+            width: auto;
+            height: 10%;
+            top: 10%;
+            left: 300px;
+            background-color: yellow;
+        }
+        .left {
+            position: absolute;
+            width: 300px;
+            height: 90%;
+            top: 10%;
+            left: 0%;
+            background-size: 100%;
+            background-image: url("clover.jpg");
+            color: white;
+            z-index: 1;
+        }
+        .left img{
+            position: relative;
+            left: 50px;
+            top: 50px;
+            z-index: 1;
+        }
+        .left h1{
+            text-align: center;
+            position: relative;
+            top: 50px;
+            z-index: 1;
+        }
+        .left hr{
+            position: relative;
+            top: 50px;
+            width: 230px;
+        }
+
+        .left p{
+            text-align: center;
+            position: relative;
+            top: 60px;
+            left: 25px;
+            width: 250px;
+        }
+        .left::after {
+            content: "";
+            opacity: 0.55;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: #000000;
+            z-index: -1;
+        }
+        .right_low{
+            position: absolute;
+            width: auto;
+            height: 80%;
+            top: 20%;
+            left: 300px;
+            background-color: yellowgreen;
+        }
+    }
+    /* 창 크기 작을 때 */
+    @media screen and (max-width: 990px) {
+        .top{
+            display: none;
+        }
+        .right_high{
+            display: none;
+        }
+        .left {
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            top: 0%;
+            left: 0%;
+            background-size: 50%;
+            background-image: url("clover.jpg");
+            color: white;
+            z-index: 1;
+        }
+        .left::after{
+            content: "";
+            opacity: 0.4;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: #000000;
+            z-index: -1;
+        }
+        .right_low{
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            top: 20%;
+            left: 0%;
+            background-color: yellowgreen;
+            z-index: 1;
+        }
+    }
+  </style>
+</head>
+<body>
+    <div class="top">
+        <h1>top</h1>
+        <p>top</p>
+    </div>
+
+    <div class="left">
+        <img style="
+            border: 1px solid white;
+            border-radius: 200px;
+            -moz-border-radius: 200px;
+            -khtml-border-radius: 200px;
+            -webkit-border-radius: 200px;
+            width: 200px;
+            height: 200px;"
+             src="ginkgo.jpg"/>
+        <h1>left</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in leo ipsum. Phasellus rutrum lacus ac quam elementum, quis sodales libero ullamcorper. Nullam luctus varius accumsan. In cursus arcu eros, sit amet ullamcorper justo facilisis at. In eleifend eros metus, sit amet vulputate nunc molestie id. Morbi dapibus velit finibus iaculis venenatis. Curabitur venenatis aliquam diam. Nunc libero ante, finibus vitae urna ut, sagittis tempus leo. Nulla facilisi. Sed laoreet ante ut tellus fringilla, vitae cursus nulla faucibus.
+
+            Maecenas tempor, quam in molestie tempus, tellus purus efficitur justo, nec mattis urna velit sed dolor. Aenean eros dolor, accumsan nec purus non, suscipit imperdiet tortor. Cras tempus auctor massa non fringilla. Cras vitae vulputate neque, eu sollicitudin ante. Nam ut bibendum justo, a interdum odio. Curabitur suscipit eros vel venenatis interdum. Praesent at nulla id dolor hendrerit maximus quis eget neque. Aenean luctus nulla id velit aliquam interdum. Donec ut lobortis velit. Integer convallis, odio in auctor sodales, ipsum tortor dignissim arcu, a tincidunt est lacus ac mi. Nulla aliquet vitae ex non hendrerit. Mauris iaculis odio molestie ex porta ultrices. Aenean interdum, ex nec accumsan ornare, arcu ex scelerisque ex, a eleifend lacus nulla non lacus.
+
+        </p>
+    </div>
+
+    <div class="right_high">
+        <h1>right_high</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in leo ipsum. Phasellus rutrum lacus ac quam elementum, quis sodales libero ullamcorper. Nullam luctus varius accumsan. In cursus arcu eros, sit amet ullamcorper justo facilisis at. In eleifend eros metus, sit amet vulputate nunc molestie id. Morbi dapibus velit finibus iaculis venenatis. Curabitur venenatis aliquam diam. Nunc libero ante, finibus vitae urna ut, sagittis tempus leo. Nulla facilisi. Sed laoreet ante ut tellus fringilla, vitae cursus nulla faucibus.
+        </p>
+    </div>
+
+    <div class="right_low">
+        <h1>right_low</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in leo ipsum. Phasellus rutrum lacus ac quam elementum, quis sodales libero ullamcorper. Nullam luctus varius accumsan. In cursus arcu eros, sit amet ullamcorper justo facilisis at. In eleifend eros metus, sit amet vulputate nunc molestie id. Morbi dapibus velit finibus iaculis venenatis. Curabitur venenatis aliquam diam. Nunc libero ante, finibus vitae urna ut, sagittis tempus leo. Nulla facilisi. Sed laoreet ante ut tellus fringilla, vitae cursus nulla faucibus.
+
+            Maecenas tempor, quam in molestie tempus, tellus purus efficitur justo, nec mattis urna velit sed dolor. Aenean eros dolor, accumsan nec purus non, suscipit imperdiet tortor. Cras tempus auctor massa non fringilla. Cras vitae vulputate neque, eu sollicitudin ante. Nam ut bibendum justo, a interdum odio. Curabitur suscipit eros vel venenatis interdum. Praesent at nulla id dolor hendrerit maximus quis eget neque. Aenean luctus nulla id velit aliquam interdum. Donec ut lobortis velit. Integer convallis, odio in auctor sodales, ipsum tortor dignissim arcu, a tincidunt est lacus ac mi. Nulla aliquet vitae ex non hendrerit. Mauris iaculis odio molestie ex porta ultrices. Aenean interdum, ex nec accumsan ornare, arcu ex scelerisque ex, a eleifend lacus nulla non lacus.
+
+            Pellentesque eget elit orci. Nullam ut arcu a mauris congue efficitur. Suspendisse et auctor magna, quis interdum lectus. Ut viverra felis eu massa gravida, et ultrices lacus pulvinar. Vestibulum at porttitor est. Aliquam sit amet tortor at massa sodales condimentum quis a arcu. Quisque sollicitudin rutrum gravida. Integer auctor ipsum vel tempus fringilla. Phasellus tincidunt maximus metus, placerat dignissim est suscipit vel. Integer vitae nulla neque. Duis eleifend volutpat enim sit amet laoreet. Donec aliquam velit a quam cursus gravida eget a ligula. Fusce vitae nisl nec neque egestas malesuada. Phasellus vel velit vitae nunc mollis eleifend id quis nisl. Vestibulum efficitur lectus ac nisi porta imperdiet.
+
+            Aliquam nec rutrum velit, eget porta dui. Vivamus venenatis, lorem quis feugiat iaculis, nisi ante tempor mauris, eu consequat arcu dui nec nulla. Aenean sit amet erat non libero semper eleifend et id nisl. Morbi id lacus lorem. Nullam rutrum massa cursus enim scelerisque pharetra. Nam at elit ut mi vehicula lacinia. Vestibulum molestie nunc est. Nunc condimentum risus eget laoreet eleifend. Quisque condimentum lectus at varius commodo. Fusce aliquam lobortis libero at blandit. Morbi fringilla dui vitae risus tincidunt suscipit. Mauris augue sem, finibus ac sem ut, congue tristique risus.
+
+            Maecenas ac enim tincidunt, faucibus nibh a, bibendum orci. Nullam hendrerit elementum nibh, id vulputate quam. Sed vel facilisis purus, faucibus ultricies augue. Nulla ornare interdum placerat. Nullam vel iaculis mi. Maecenas ullamcorper iaculis elit, ac ultricies turpis laoreet non. In accumsan commodo erat ut imperdiet. Fusce enim tortor, dictum eu efficitur ac, cursus sed orci. Vivamus eu eros lacus. Ut tortor lorem, lobortis in odio et, pharetra ullamcorper odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in condimentum sem, et eleifend nisi. Vestibulum lacinia eros vel odio vulputate, vel pellentesque diam consectetur. Quisque luctus mollis tincidunt. Maecenas vitae accumsan felis. Nullam ante nunc, luctus et velit quis, mollis varius lorem.</p>
+    </div>
+</body>
+</html>
