@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Sign UP</title>
+        <style>
+        div.caution{
+                width: 590px;
+                height: 45px;
+                background: #FF0000;
+                font-family: "Book Antiqua";
+                font-size: 30px;
+        }
+        html {
+                background: #333333;
+                color: #ffffff;
+        }
+
+        html.white {
+                background: #ffffff;
+                color: #000000;
+        }
+        </style>
+</head>
+<body>
+
+<div class="caution">
+        <caption>CAUTION: Don't input private information.<br></caption>
+</div>
+<br>
+
+<button id="toggleTheme">toggle Theme</button>
+
+<br>
+<form action="back/new_div.html">
+        <label>Student ID : </label><br>
+        <input width="400px" type="text" autofocus placeholder="PLEASE READ CAUTION"><br>
+
+        <label >Name :</label><br>
+        <input type="text"><br>
+
+        <label>Birth day : </label><br>
+        <input type="date"><br>
+
+        <label>Phone number: </label><br>
+        <input type="number"><br>
+
+        <label>E-mail: </label><br>
+        <input type="text"><br>
+
+        <label>Grade: </label><br>
+        <input type="radio" name="Grade">
+        <label>1</label><br>
+        <input type="radio" name="Grade">
+        <label>2</label><br>
+        <input type="radio" name="Grade">
+        <label>3</label><br>
+        <input type="radio" name="Grade">
+        <label>4</label><br>
+        <input type="radio" name="Grade">
+        <label>Other</label><br>
+        <br>
+        <input type="submit" value="Sign up" />
+        <input type="reset" value="Reset" />
+</form>
+</body>
+</html>
+<script>
+        document.getElementById("toggleTheme").addEventListener("click",() => {
+                document.documentElement.classList.toggle("white")
+        })
+</script>
