@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
   <style>
+    html {
+        margin: 0px;
+        z-index: 3;
+    }
+    html.white{
+        margin: 0px;
+        color: black;
+        z-index: 3;
+    }
+    body{
+        margin: 0px;
+    }
 
-
+    .thing {
+        position: relative;
+        left: 150px;
+    }
+    .thing2 {
+        opacity: 0;
+        position: absolute;
+        left: 150px;
+        top: 1150px;
+    }
     /* 창 크기 클 때 */
     @media screen and (min-width: 990px) {
-        html{
-            width: 100%;
-            height: 100%;
-        }
-        body{
-            width: 100%;
-            height: 100%;
-        }
         .left {
             position: absolute;
             width: 300px;
@@ -26,12 +39,16 @@
             background-image: url("clover.jpg");
             color: white;
             z-index: 1;
-            /*padding 사용하고 margin 삭제 */
         }
-        .left img{
+        .left img.icon{
+            border-radius: 200px;
+            -moz-border-radius: 200px;
+            -webkit-border-radius: 200px;
+            width: 200px;
+            height: 200px;
             position: relative;
-            left: 50px;
             top: 50px;
+            left: 50px;
             z-index: 1;
         }
         .left h1{
@@ -43,19 +60,143 @@
         .left hr{
             position: relative;
             top: 50px;
-            width: 230px;
+            width: 200px;
+            z-index: 1;
         }
-
-        .left p{
+        .left p.info{
             text-align: center;
             position: relative;
             top: 60px;
             left: 25px;
             width: 250px;
+            z-index: 1;
+        }
+        .left a{
+            text-align: center;
+            position: relative;
+            top: 50px;
+            left: 65px;
+            width: 240px;
+            z-index: 1;
+            color: white;
+        }
+        .left a:hover{
+            color: yellow;
+        }
+        .left::before {
+            content: "";
+            opacity: 0.3;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0;
+            background-color: #000000;
+            z-index: -1;
         }
         .left::after {
             content: "";
-            opacity: 0.55;
+            opacity: 0.6;
+            position: absolute;
+            top: 0px;
+            left: 10%;
+            right: 0px;
+            bottom: 0px;
+            width: 80%;
+            background-color: #000000;
+            z-index: -1;
+        }
+
+        .left::before.white {
+            content: "";
+            opacity: 0.3;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: #ffffff;
+            z-index: -1;
+        }
+        .left::after.white {
+            content: "";
+            opacity: 0.6;
+            position: absolute;
+            top: 0px;
+            left: 10%;
+            right: 0px;
+            bottom: 0px;
+            width: 80%;
+            background-color: #ffffff;
+            z-index: -1;
+        }
+        .NIS{
+            position: relative;
+            top: 60px;
+            left: 0px;
+            width: 300px;
+        }
+        .NIS h3{
+            text-align: center;
+        }
+        .NIS p{
+            text-align: center;
+            position: relative;
+        }
+        .NIS li{
+            margin-left: 50px;
+            margin-top: 5px;
+        }
+        .right{
+            position: absolute;
+            width: calc(100% - 300px);
+            height: 100%;
+            top: 0%;
+            left: 300px;
+            background-image: url("plant.png");
+            background-position: bottom;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .right.white{
+            position: absolute;
+            width: calc(100% - 300px);
+            height: 100%;
+            top: 0%;
+            left: 300px;
+            background-image: url("plant_dark.png");
+            background-position: bottom;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .right h1{
+            position: relative;
+            text-align: left;
+            padding-left: 35px;
+            padding-top: 50px;
+            padding-right: 80px;
+            color: black;
+            font-size: 2vw;
+        }
+        .right p{
+            position: relative;
+            padding-left: 80px;
+            padding-top: 30px;
+            padding-right: 80px;
+            color: black;
+            font-size: 1vw;
+        }
+        .timesheet{
+            padding: 5%;
+        }
+        .timesheet table{
+            height: 100%;
+            border-collapse: collapse;
+            z-index: -1;
+        }
+        .timesheet::before {
+            content: "";
+            opacity: 0.3;
             position: absolute;
             top: 0px;
             left: 0px;
@@ -64,28 +205,19 @@
             background-color: #000000;
             z-index: -1;
         }
-        .right{
-            position: absolute;
-            width: auto;
-            height: 100%;
-            top: 0%;
-            left: 300px;
-            background-image: url("plant-gdb5d756ad_1920.jpg");
-            background-position: bottom;
-            background-size: 100%;
-            background-repeat: no-repeat;
+        .timesheet tr.lecture{
+            height: 5vh;
+
         }
-        .right h1{
-            position: relative;
-            top : 50px;
-            left: 50px;
-            color: black;
+        .timesheet th.value_width{
+            width: 15vw;
+            max-width: 140px;
         }
-        .right p{.
-            position: relative;
-            margin-top: 80px;
-            margin: 60px;
-            color: black;
+        .menu{
+            padding: 5px;
+        }
+        .youtube{
+            width: 80%;
         }
     }
     /* 창 크기 작을 때 */
@@ -93,15 +225,14 @@
         .left {
             position: absolute;
             width: 100%;
-            height: 20%;
+            height: 10%;
             top: 0%;
             left: 0%;
             background-size: 50%;
             background-image: url("clover.jpg");
             color: white;
-            z-index: 1;
         }
-        .left::after{
+        .left::before{
             content: "";
             opacity: 0.4;
             position: absolute;
@@ -110,16 +241,64 @@
             right: 0px;
             bottom: 0px;
             background-color: #000000;
-            z-index: -1;
+        }
+        .left img.icon{
+            border-radius: 10vh;
+            -moz-border-radius: 10vh;
+            -webkit-border-radius: 10vh;
+            width: 7vh;
+            height: 7vh;
+            position: relative;
+            top: 1.5vh;
+            left: 1.5vh;
+            z-index: 1;
+        }
+        .left h1{
+            position: absolute;
+            top: 1.5vh;
+            left: 37vw;
+        }
+        .left p{
+            display: none;
+        }
+        .left hr{
+            display: none;
+        }
+        .left a{
+            display: none;
         }
         .right{
             position: absolute;
             width: 100%;
-            height: 80%;
-            top: 20%;
+            height: 90%;
+            top: 10%;
             left: 0%;
-            background-color: yellowgreen;
+            background-image: url("plant.png");
+            background-size: 150%;
+            background-position-x: right;
+            background-position-y: bottom;
+            background-repeat: no-repeat;
             z-index: 1;
+        }
+        .right h1{
+            position: relative;
+            width: calc(100% - 5vh);
+            height: 10%;
+            padding-top: 5vh;
+            padding-left: 5vh;
+            padding-right: 5vh;
+        }
+        .right p{
+            position: relative;
+            width: calc(100% - 5vh);
+            height: calc(100% - 10vh);
+            padding-left: 5vh;
+            padding-right: 5vh;
+
+        }
+        .timesheet{
+            border-collapse: collapse;
+            border-color: black;
         }
     }
   </style>
@@ -127,33 +306,160 @@
 <body>
 
     <div class="left">
-        <img style="
-            border: 1px solid white;
-            border-radius: 200px;
-            -moz-border-radius: 200px;
-            -khtml-border-radius: 200px;
-            -webkit-border-radius: 200px;
-            width: 200px;
-            height: 200px;"
-             src="ginkgo.jpg"/>
-        <h1>left</h1>
+        <div id="chase">
+        <img class="icon" src="ginkgo.jpg"/>
+        <h1>My homepage</h1>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in leo ipsum. Phasellus rutrum lacus ac quam elementum, quis sodales libero ullamcorper. Nullam luctus varius accumsan. In cursus arcu eros, sit amet ullamcorper justo facilisis at. In eleifend eros metus, sit amet vulputate nunc molestie id. Morbi dapibus velit finibus iaculis venenatis. Curabitur venenatis aliquam diam. Nunc libero ante, finibus vitae urna ut, sagittis tempus leo. Nulla facilisi. Sed laoreet ante ut tellus fringilla, vitae cursus nulla faucibus.
+        <p class="info">CBNU Software<br> Engneering 3rd Grade</p>
+        <p class="info">trying to be <br>a back-end developer</p>
+        <div class="NIS">
+            <h3>Now I Studying</h3>
 
-        </p>
+            <p>In Personal</p>
+            <ol>
+                <li><img src="spring_boot.png" width = "15" height="15" alt="Springboot_icon"> Java Springboot</li>
+                <li><img src="mysql.png" width = "15" height="15" alt="Mysql_icon"> MySQL</li>
+            </ol>
+            </li>
+            <p>In University</p>
+            <ol>
+                <li><img src="android_studio.png" width = "15" height="15" alt="android_studio_icon"> Android Studio</li>
+                <li><img src="html.png" width="15" height="15" alt="html_icon"> HTML</li>
+            </ol>
+            </li>
+            </ul>
+        </div>
+        <p class="info">more information in</p>
+        <a href="https://github.com/hm5961?tab=wrepositories" targer="_self">
+            <img src="git.png" width = "20" height="20" alt="git_icon">My Github site<sub>(link)</sub>
+        </a>
+        </div>
     </div>
 
-
     <div class="right">
-        <h1>right_low</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in leo ipsum. Phasellus rutrum lacus ac quam elementum, quis sodales libero ullamcorper. Nullam luctus varius accumsan. In cursus arcu eros, sit amet ullamcorper justo facilisis at. In eleifend eros metus, sit amet vulputate nunc molestie id. Morbi dapibus velit finibus iaculis venenatis. Curabitur venenatis aliquam diam. Nunc libero ante, finibus vitae urna ut, sagittis tempus leo. Nulla facilisi. Sed laoreet ante ut tellus fringilla, vitae cursus nulla faucibus.
+        <div class="menu">
+            <h1>menubar</h1>
+            <form>
+                   <!-- <input type="radio" name="theme" value="theme_white" onclick='getTheme(event)' id="theme_white" checked="checked">Bright(Default)
+                    <input type="radio" name="theme" value="theme_dark" onclick='getTheme(event)' id="theme_dark">Dark(Optional)
+                <input type="radio" name="music" value="Frank Sinatra">웹디자인
+                <input type="radio" name="music" value="웹디자인">웹디자인
+                -->
+                <button id="toggleTheme">toggle Theme</button>
+                <button id="tog">change music video</button>
+            </form>
 
-            Maecenas tempor, quam in molestie tempus, tellus purus efficitur justo, nec mattis urna velit sed dolor. Aenean eros dolor, accumsan nec purus non, suscipit imperdiet tortor. Cras tempus auctor massa non fringilla. Cras vitae vulputate neque, eu sollicitudin ante. Nam ut bibendum justo, a interdum odio. Curabitur suscipit eros vel venenatis interdum. Praesent at nulla id dolor hendrerit maximus quis eget neque. Aenean luctus nulla id velit aliquam interdum. Donec ut lobortis velit. Integer convallis, odio in auctor sodales, ipsum tortor dignissim arcu, a tincidunt est lacus ac mi. Nulla aliquet vitae ex non hendrerit. Mauris iaculis odio molestie ex porta ultrices. Aenean interdum, ex nec accumsan ornare, arcu ex scelerisque ex, a eleifend lacus nulla non lacus.
+        </div>
+        <h1>Time Table for This Semester</h1>
+        <div class="timesheet">
+            <table border="1">
+                <tr>
+                    <th colspan="6">시간표</th>
+                </tr>
+                <tr align="center">
+                    <th></th>
+                    <th class="value_width">월</th>
+                    <th class="value_width">화</th>
+                    <th class="value_width">수</th>
+                    <th class="value_width">목</th>
+                    <th class="value_width">금</th>
+                </tr>
+                <tr class="lecture">
+                    <td>09</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="lecture" valign="top">
+                    <td valign="middle">10</td>
+                    <td rowspan="2" bgcolor="#dc343c">오픈소스<br>웹 소프트웨어<br>S4-1-205</td>
+                    <td rowspan="2" bgcolor="#f9c700">객체지향설계<br>S4-1-204</td>
+                    <td rowspan="2" bgcolor="#4040e5">컴파일러<br>S4-1-106</td>
+                    <td bgcolor="#48e5b4">컴퓨터네트워크<br>S4-1-106</td>
+                    <td rowspan="2" bgcolor="#28b051">운영체제<br>S4-1-104</td>
+                </tr>
+                <tr class="lecture">
+                    <td>11</td>
+                    <td></td>
+                </tr>
+                <tr class="lecture">
+                    <td>12</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="lecture" valign="top">
+                    <td valign="middle">13</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="4" bgcolor="#f99c2d">오픈소스<br>전문프로젝트<br>S4-1-204</td>
+                    <td rowspan="2" bgcolor="#a000f9">창업기획<br>E9-105F</td>
+                    <td rowspan="2" bgcolor="#dc343c">오픈소스<br>웹 소프트웨어<br>S4-1-102</td>
+                </tr>
+                <tr class="lecture" valign="top">
+                    <td valign="middle" >14</td>
+                    <td></td>
+                    <td bgcolor="#28b051">운영체제<br>S4-1-104</td>
+                </tr>
+                <tr class="lecture" valign="top">
+                    <td valign="middle" >15</td>
+                    <td></td>
+                    <td rowspan="2" bgcolor="#48e5b4">컴퓨터네트워크<br>S4-1-106</td>
+                    <td rowspan="2" bgcolor="#4040e5">컴파일러<br>S4-1-206</td>
+                    <td></td>
+                </tr>
+                <tr class="lecture" valign="top">
+                    <td valign="middle">16</td>
+                    <td rowspan="2" bgcolor="#f9c700" >객체지향설계<br>S4-1-102</td>
+                    <td></td>
+                </tr>
+                <tr class="lecture">
+                    <td>17</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
 
-            Pellentesque eget elit orci. Nullam ut arcu a mauris congue efficitur. Suspendisse et auctor magna, quis interdum lectus. Ut viverra felis eu massa gravida, et ultrices lacus pulvinar. Vestibulum at porttitor est. Aliquam sit amet tortor at massa sodales condimentum quis a arcu. Quisque sollicitudin rutrum gravida. Integer auctor ipsum vel tempus fringilla. Phasellus tincidunt maximus metus, placerat dignissim est suscipit vel. Integer vitae nulla neque. Duis eleifend volutpat enim sit amet laoreet. Donec aliquam velit a quam cursus gravida eget a ligula. Fusce vitae nisl nec neque egestas malesuada. Phasellus vel velit vitae nunc mollis eleifend id quis nisl. Vestibulum efficitur lectus ac nisi porta imperdiet.
+        <hr>
 
-            Aliquam nec rutrum velit, eget porta dui. Vivamus venenatis, lorem quis feugiat iaculis, nisi ante tempor mauris, eu consequat arcu dui nec nulla. Aenean sit amet erat non libero semper eleifend et id nisl. Morbi id lacus lorem. Nullam rutrum massa cursus enim scelerisque pharetra. Nam at elit ut mi vehicula lacinia. Vestibulum molestie nunc est. Nunc condimentum risus eget laoreet eleifend. Quisque condimentum lectus at varius commodo. Fusce aliquam lobortis libero at blandit. Morbi fringilla dui vitae risus tincidunt suscipit. Mauris augue sem, finibus ac sem ut, congue tristique risus.
+        <div class="youtube">
+            <div id="thing" class="thing">
+                <iframe width="410" height="230" src="https://www.youtube.com/embed/fcSaunE4tI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+            </div>
+            <div id="thing2" class="thing thing2">
+                <iframe width="410" height="230"  src="https://www.youtube.com/embed/HgEqZ-RMg_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+            </div>
+        </div>
+
 
     </div>
 </body>
 </html>
+
+<script>
+    var tog = document.getElementById("tog");
+    var thing = document.getElementById("thing");
+    var thing2 = document.getElementById("thing2")
+
+    tog.addEventListener("click", function() {
+
+        thing.classList.toggle("m-fadeOut");
+        thing2.classList.toggle("m-fadeIn");
+
+    });
+
+    document.getElementById("toggleTheme").addEventListener("click",() => {
+        document.documentElement.classList.toggle("white")
+    })
+
+
+</script>
