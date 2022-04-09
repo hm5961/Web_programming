@@ -3,20 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>My Homepage with New Design</title>
+    <link rel="stylesheet" type="text/css" href="style_all.css">
   <style>
-    body{
-        margin: 0px;
-    }
-    .thing {
-        position: relative;
-        left: 150px;
-    }
-    .thing2 {
-        opacity: 0.5;
-        position: absolute;
-        left: 150px;
-        top: 1050px;
-    }
+
+
     /* 창 크기 클 때 */
     @media screen and (min-width: 990px) {
         .left {
@@ -29,6 +19,7 @@
             background-image: url("clover.jpg");
             color: white;
             z-index: 1;
+            font-family: "Gill Sans MT";
         }
         .left img.icon{
             border-radius: 200px;
@@ -46,6 +37,7 @@
             position: relative;
             top: 50px;
             z-index: 1;
+            font-family: "Brush Script MT";
         }
         .left hr{
             position: relative;
@@ -97,120 +89,142 @@
             z-index: -1;
         }
 
-        .left::before.white {
-            content: "";
-            opacity: 0.3;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: #ffffff;
-            z-index: -1;
-        }
-        .left::after.white {
-            content: "";
-            opacity: 0.6;
-            position: absolute;
-            top: 0px;
-            left: 10%;
-            right: 0px;
-            bottom: 0px;
-            width: 80%;
-            background-color: #ffffff;
-            z-index: -1;
-        }
-        .NIS{
-            position: relative;
-            top: 60px;
-            left: 0px;
-            width: 300px;
-        }
-        .NIS h3{
-            text-align: center;
-        }
-        .NIS p{
-            text-align: center;
-            position: relative;
-        }
-        .NIS li{
-            margin-left: 50px;
-            margin-top: 5px;
-        }
-        .right{
-            position: absolute;
-            width: calc(100% - 300px);
-            height: 100%;
-            top: 0%;
-            left: 300px;
-            background-image: url("plant.png");
-            background-position: bottom;
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .right.white{
-            position: absolute;
-            width: calc(100% - 300px);
-            height: 100%;
-            top: 0%;
-            left: 300px;
-            background-image: url("plant_dark.png");
-            background-position: bottom;
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .right h1{
-            position: relative;
-            text-align: left;
-            padding-left: 35px;
-            padding-top: 50px;
-            padding-right: 80px;
-            color: black;
-            font-size: 2vw;
-        }
-        .right p{
-            position: relative;
-            padding-left: 80px;
-            padding-top: 30px;
-            padding-right: 80px;
-            color: black;
-            font-size: 1vw;
-        }
-        .timesheet{
-            padding: 5%;
-        }
-        .timesheet table{
-            height: 100%;
-            border-collapse: collapse;
-            z-index: -1;
-        }
-        .timesheet::before {
-            content: "";
-            opacity: 0.3;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: #000000;
-            z-index: -1;
-        }
-        .timesheet tr.lecture{
-            height: 5vh;
+        /*오류 발생중*/
+        /*
+            .left::before.white {
+                content: "";
+                opacity: 0.3;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                background-color: #ffffff;
+                z-index: 0;
+            }
+            .left::after.white {
+                content: "";
+                opacity: 0.6;
+                position: absolute;
+                top: 0px;
+                left: 10%;
+                right: 0px;
+                bottom: 0px;
+                width: 80%;
+                background-color: #ffffff;
+                z-index: 0;
+            }
+         */
+            .NIS{
+                position: relative;
+                top: 60px;
+                left: 0px;
+                width: 300px;
+                font-family: "Gill Sans MT";
+            }
+            .NIS h3{
+                text-align: center;
+            }
+            .NIS p{
+                text-align: center;
+                position: relative;
+            }
+            .NIS li{
+                margin-left: 50px;
+                margin-top: 5px;
+            }
+            .NIS ol{
+                list-style-type: upper-roman;
+            }
+            .right{
+                position: absolute;
+                width: calc(100% - 300px);
+                height: 100%;
+                top: 0%;
+                left: 300px;
+                background-image: url("plant.png");
+                background-position: bottom;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                font-family: "Gill Sans MT";
+            }
+        /*오류 발생중*/
+        /*
+                .right.white{
+                    position: absolute;
+                    width: calc(100% - 300px);
+                    height: 100%;
+                    top: 0%;
+                    left: 300px;
+                    background-image: url("plant_dark.png");
+                    background-position: bottom;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+         */
+                .right h1{
+                    position: relative;
+                    text-align: left;
+                    padding-left: 35px;
+                    padding-top: 50px;
+                    padding-right: 80px;
+                    color: black;
+                    font-size: 2vw;
+                }
+                .right p{
+                    position: relative;
+                    padding-left: 80px;
+                    padding-top: 30px;
+                    padding-right: 80px;
+                    color: black;
+                    font-size: 1vw;
+                }
+                .timesheet{
+                    padding: 5%;
+                    font-family: "Gill Sans MT";
+                }
+                .timesheet h1{
+                    font-family: "Brush Script MT";
+                }
+                .timesheet table{
+                    height: 100%;
+                    z-index: -1;
+                }
+                .timesheet::before {
+                    content: "";
+                    opacity: 0.3;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    background-color: #000000;
+                    z-index: -1;
+                }
+                .timesheet tr.lecture{
+                    height: 5vh;
 
-        }
-        .timesheet th.value_width{
-            width: 15vw;
-            max-width: 140px;
-        }
-        .menu{
-            padding: 5px;
-        }
-        .youtube{
-            width: 80%;
-        }
-    }
-    /* 창 크기 작을 때 */
+                }
+                .timesheet th.value_width{
+                    width: 15vw;
+                    max-width: 140px;
+                }
+                /*
+                .menu{
+                    padding: 5px;
+                }
+                .menu button{
+                    display: inline-block;
+                    width: 100px;
+                    margin: 10px;
+                }
+                 */
+
+                .youtube{
+                    width: 80%;
+                }
+            }
+            /* 창 크기 작을 때 */
     @media screen and (max-width: 990px) {
         .left {
             position: absolute;
@@ -221,6 +235,7 @@
             background-size: 50%;
             background-image: url("clover.jpg");
             color: white;
+            font-family: "Gill Sans MT";
         }
         .left::before{
             content: "";
@@ -245,8 +260,10 @@
         }
         .left h1{
             position: absolute;
-            top: 1.5vh;
+            top: 1vh;
             left: 37vw;
+            font-family: "Brush Script MT";
+            font-size: 3em;
         }
         .left p{
             display: none;
@@ -269,6 +286,7 @@
             background-position-y: bottom;
             background-repeat: no-repeat;
             z-index: 1;
+            font-family: "Gill Sans MT";
         }
         .right h1{
             position: relative;
@@ -289,6 +307,10 @@
         .timesheet{
             border-collapse: collapse;
             border-color: black;
+            font-family: "Gill Sans MT";
+        }
+        .timesheet h1{
+            font-family: "Brush Script MT";
         }
     }
   </style>
@@ -321,28 +343,34 @@
         </div>
         <p class="info">more information in</p>
         <a href="https://github.com/hm5961?tab=wrepositories" target="_self">
-            <img src="git.png" width = "20" height="20" alt="git_icon">My Github site<sub>(link)</sub>
+            <img style="alt:git_icon" width="15" height="15" src="git.png">My Github site<sub>(link)</sub>
         </a>
         </div>
     </div>
 
     <div class="right">
+        <!--
+        1. 버튼 오류 해결
+        2. 라디오 교체 예정
         <div class="menu">
             <h1>menubar</h1>
             <form>
-                   <!-- <input type="radio" name="theme" value="theme_white" onclick='getTheme(event)' id="theme_white" checked="checked">Bright(Default)
-                    <input type="radio" name="theme" value="theme_dark" onclick='getTheme(event)' id="theme_dark">Dark(Optional)
+                <input type="radio" name="theme" value="theme_white" onclick='getTheme(event)' id="theme_white" checked="checked">Bright(Default)
+                <input type="radio" name="theme" value="theme_dark" onclick='getTheme(event)' id="theme_dark">Dark(Optional)
                 <input type="radio" name="music" value="Frank Sinatra">웹디자인
                 <input type="radio" name="music" value="웹디자인">웹디자인
-                -->
+
                 <button id="tog">change music video</button>
                 <button id="toggleTheme">toggle Theme</button>
             </form>
 
         </div>
-        <h1>Time Table for This Semester</h1>
+
+        -->
         <div class="timesheet">
-            <table border="1">
+            <h1>Time Table for This Semester</h1>
+            <table style="
+                    border-collapse: collapse; border-left-color: #f4eddf; border-right-color: #f4eddf;" border="1">
                 <tr>
                     <th colspan="6">시간표</th>
                 </tr>
@@ -364,7 +392,7 @@
                 </tr>
                 <tr class="lecture" valign="top">
                     <td valign="middle">10</td>
-                    <td rowspan="2" bgcolor="#dc343c">오픈소스<br>웹 소프트웨어<br>S4-1-205</td>
+                    <td style="row-span: 2; background: #dc343c">오픈소스<br>웹 소프트웨어<br>S4-1-205</td>
                     <td rowspan="2" bgcolor="#f9c700">객체지향설계<br>S4-1-204</td>
                     <td rowspan="2" bgcolor="#4040e5">컴파일러<br>S4-1-106</td>
                     <td bgcolor="#48e5b4">컴퓨터네트워크<br>S4-1-106</td>
@@ -434,7 +462,8 @@
     </div>
 </body>
 </html>
-
+<!--
+스크립트 오류 발생
 <script>
     var tog = document.getElementById("tog");
     var thing = document.getElementById("thing");
@@ -444,12 +473,13 @@
 
         thing.classList.toggle("m-fadeOut");
         thing2.classList.toggle("m-fadeIn");
+        alert("11");
 
     });
 
     document.getElementById("toggleTheme").addEventListener("click",() => {
         document.documentElement.classList.toggle("white")
+        alert("22");
     })
-
-
 </script>
+-->

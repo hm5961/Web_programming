@@ -1,0 +1,22 @@
+
+body{
+    margin: 0px;
+}
+
+/*오류 발생중*/
+/*
+  html.white{
+      color: black;
+      z-index: 5;
+  }
+*/
+.thing {
+    position: relative;
+    left: 150px;
+}
+.thing2 {
+    opacity: 0;
+    position: absolute;
+    left: 150px;
+    top: 1050px;
+}

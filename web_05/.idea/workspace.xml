@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -41,8 +42,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Operating_System/week4,5/Java Thread" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+>>>>>>> 7f112cae722efa934a621a400ff28d80098a29fd
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -66,7 +74,14 @@
       <workItem from="1648475343199" duration="799000" />
       <workItem from="1648479078239" duration="595000" />
       <workItem from="1648692715789" duration="12092000" />
+<<<<<<< HEAD
       <workItem from="1649156909030" duration="243000" />
+=======
+      <workItem from="1648719505140" duration="15387000" />
+      <workItem from="1648737569568" duration="930000" />
+      <workItem from="1648738522014" duration="3519000" />
+      <workItem from="1648897970824" duration="694000" />
+>>>>>>> 7f112cae722efa934a621a400ff28d80098a29fd
     </task>
     <servers />
   </component>

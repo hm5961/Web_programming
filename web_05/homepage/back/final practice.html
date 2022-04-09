@@ -20,11 +20,11 @@
         div.top_left{
             float: left;
             width: 400px;
-
+        }
         div.floating{
             position: fixed;
         }
-        }
+
         table{
             border-collapse: collapse;
             border-color: #888888;
@@ -106,7 +106,7 @@
     </div>
     <div>
         <div id="thing" class="thing">
-            <iframe width="410" height="230" src="https://www.youtube.com/embed/3jHr5JbTeRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfulslscreen></iframe>
+            <iframe width="410" height="230" src="https://www.youtube.com/embed/3jHr5JbTeRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br>
         </div>
         <div id="thing2" class="thing thing2">
@@ -217,12 +217,12 @@
     var thing = document.getElementById("thing");
     var thing2 = document.getElementById("thing2")
 
-    tog.addEventListener("click", function() {
-
-        thing.classList.toggle("m-fadeOut");
-        thing2.classList.toggle("m-fadeIn");
-
-    });
+    // tog.addEventListener("click", function() {
+    //
+    //     thing.classList.toggle("m-fadeOut");
+    //     thing2.classList.toggle("m-fadeIn");
+    //
+    // });
 
     document.getElementById("toggleTheme").addEventListener("click",() => {
         document.documentElement.classList.toggle("white")
