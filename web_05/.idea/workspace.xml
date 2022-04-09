@@ -42,13 +42,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Operating_System/week4,5/Java Thread" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\김현민\Documents\GitHub\Web_programming\web_05" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\Operating_System\week4,5" />
       <recent name="C:\Users\김현민\Documents\GitHub\Web_programming\web_05\homepage" />
     </key>
   </component>
@@ -65,6 +66,7 @@
       <workItem from="1648475343199" duration="799000" />
       <workItem from="1648479078239" duration="595000" />
       <workItem from="1648692715789" duration="12092000" />
+      <workItem from="1649156909030" duration="243000" />
     </task>
     <servers />
   </component>
