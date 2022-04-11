@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        #header{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+        }
+        #nav1{
+            width: 20%;
+            height: 200px;
+            float: left;
+        }
+        #nav2{
+            width: 80%;
+            height: 200px;
+            float: right;
+            font-size: small;
+        }
+        #content_content{
+            background-color: bisque;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            float: left;
+        }
+        #content_schedule{
+            background-color: yellowgreen;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            float: left;
+        }
+        #content_more{
+            background-color: darkslateblue;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            float: left;
+        }
+        #footer{
+            background-color: orange;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            clear: both;
+        }
+        ul{
+            text-align: center;
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        ul li{
+            display: inline;
+            padding: 20px;
+        }
+        ul li a{
+            text-decoration: none;
+        }
+        ul li a:hover{
+            color: red;
+        }
+        }
+        img{
+            float: left;
+        }
+        .move_top{
+            height: 30px;
+            width: 50px;
+            position: fixed;
+            left: 90%;
+            top: 90%;
+            background-color: skyblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id = "header">
+        <h1>My Homepage</h1>
+    </div>
+
+    <ul id = "top_section">
+        <li><a href="#header">HOME</a></li>
+        <li><a href="#nav2">INTRODUCE</a></li>
+        <li><a href="#content_content">CONTENT</a></li>
+        <li><a href="#content_schedule">SCHEDULE</a></li>
+        <li><a href="#content_more">MORE</a></li>
+    </ul>
+
+    <div id = "nav1">
+        <img src="img1.png", alt="profile" width="200px", height="200px"></div>
+    <div id = "nav2">
+        <h1>Introduce</h1>
+        <p>Hello! My name is ----</p>
+        <p>My major is ----</p>
+        <p>My number is ----</p>
+        <p>My hobby is ----</p>
+    </div>
+
+
+    <div id = "content_content">
+        <h1>content</h1>
+        <h1>content</h1>
+        <h1>content</h1>
+        <h1>content</h1>
+        <h1>content</h1>
+        <h1>content</h1>
+    </div>
+    <div id = "content_schedule">
+        <h1>schedule</h1>
+        <h1>schedule</h1>
+        <h1>schedule</h1>
+        <h1>schedule</h1>
+        <h1>schedule</h1>
+        <h1>schedule</h1>
+    </div>
+    <div id = "content_more">
+        <h1>more</h1>
+        <h1>more</h1>
+        <h1>more</h1>
+        <h1>more</h1>
+        <h1>more</h1>
+        <h1>more</h1>
+    </div>
+    <div id = "footer">
+        <p>
+            2022-01 WebProgramming
+        <div class="move_top">
+            <a href="#top_section">UP</a>
+        </div>
+        </p>
+    </div>
+</div>
+</body>
+</html>
