@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f39e9249-efd3-4c85-a1f7-55b7fc049c07" name="변경" comment="" />
+    <list default="true" id="f39e9249-efd3-4c85-a1f7-55b7fc049c07" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,10 +46,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Operating_System/week4,5/Java Thread" />
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Operating_System/week4,5/Java_Thread" />
+>>>>>>> Stashed changes
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
 >>>>>>> 7f112cae722efa934a621a400ff28d80098a29fd
@@ -81,7 +87,11 @@
       <workItem from="1648737569568" duration="930000" />
       <workItem from="1648738522014" duration="3519000" />
       <workItem from="1648897970824" duration="694000" />
+<<<<<<< Updated upstream
 >>>>>>> 7f112cae722efa934a621a400ff28d80098a29fd
+=======
+      <workItem from="1649297285264" duration="635000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
