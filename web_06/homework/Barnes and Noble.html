@@ -1,81 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 2018038036 김현민 -->
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
         body{
             font-family: Arial;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
         }
         #header{
-            width: 990px;
+            width: 100%;
             height: 100px;
             color: white;
             background-color:#8CACB2;
-            margin-left: 5%;
         }
         .logo{
-            width: 300px;
-            height: 80px;
-            margin: 10px;
+            width: 200px;
+            height: 60px;
+            margin: 20px;
             float: left;
         }
         #head_info{
             text-align: center;
+            font-weight: bold;
+        }
+
+        #content1{
+            text-align: center;
+            width: 70%;
+        }
+        #content2{
+            text-align: center;
+            width: 70%;
+        }
+        #content3{
+            text-align: center;
+            width: 70%;
+        }
+        #content4{
+            text-align: center;
+            width: 70%;
+        }
+        #feedback{
+
+            text-align: center;
+            width: 70%;
+        }
+        #ADS{
+            text-align: center;
+            position: fixed;
+            width: 30%;
+            height: 90px;
+            background-color:#8CACB2;
+            left: 70%;
+            top: 30%;
+
+        }
+        #footer{
+            text-align: right;
+            background-color:#8CACB2;
+            margin-top: 50px;
+        }
+        .foot_p{
+            padding: 15px;
+        }
+        .foot_locate{
+            padding: 10px;
+            font-style: italic;
+        }
+        .hr_dot{
+            width: 70%;
+            float: left;
+            border-top: 1px dotted grey;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .feedback_input{
+            width: 80%;
+            height: 200px;
+        }
+        .submit{
+            background-color: #aCcCd2;
+            border-color: white;
+        }
+        .title{
+            float: left;
+            margin-top: 30px;
+        }
+        .top_but{
+            float: left;
+            margin-top: 40px;
+        }
+        .a_but{
+            width: 60px;
+            border-radius: 20px;
+            border: 0px;
+            margin-right: 5px;
+        }
+        .a_but:hover{
+            background-color: grey;
+        }
+        .home{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+        .books{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+        .gifts{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
         }
     </style>
 </head>
 <body>
     <div id="header">
         <img class="logo", src="logo.png">
-        <p>Premium bookshop</p>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Books</a></li>
-            <li><a href="">Gifts</a></li>
+        <h1 class="title">Premium bookshop</h1>
+        <ul class="top_but">
+            <button class="a_but"><a href="#header" class="home">Home</a></button>
+            <button class="a_but"><a href="#content1" class="books">Books</a></button>
+            <button class="a_but"><a href="" class="gifts">Gifts</a></button>
         </ul>
     </div>
     <div id="head_info">
         <p>The Best Bookstore Online</p>
         <p>Over 6 million books ready for shipment within 24 hours and 4.5 million eBooks to download now.</p>
-        <hr>
     </div>
+    <hr>
     <div id="content1">
-        <h1>ThePresident Is Missing</h1>
+        <h1>The President Is Missing</h1>
         <p>Please join us welcoming President Bill Clinton and world's bestselling author James Patterson to celebrate the release of their new novel, The President is Missing. a limited number of wristbands for event access will be distributed beginning at 9am the dat the even</p>
         <img src="clinton.jpg">
-        <hr>
     </div>
+    <hr class="hr_dot">
     <div id="content2">
         <h1>True Roots: A Mindful Kitchen with More Than 100 Recipes Free of Gluten, Dairy, and Refined Sugar</h1>
         <p>In her first book, Kristin Cavallari shared her personal journey along with her tips on everything from style to relationships. And now, wit True Root, Cavallari shows you that improving that improving the way tou eat doesn't have to be difficult-a clean and toxin-free diet can and should be fun, easy, and enjoyable. She learned the hard way thatdieting leads nowwhere good, and that a clean lifestyle is the ticket to feeling and being healthy.</p>
         <img src="roots.jpg">
     </div>
+    <hr class="hr_dot">
     <div id="content3">
         <h1>Selling Boldly: Applying the New Science of Positive Psychology to Dramatically Increase Your Confidence, Happiness, and Sales</h1>
         <p>Fear is the reason most salespeople don't like up the phone. Fear is the reason we don't ask for the business more, even though our customers want to buy from us.</p>
         <img src="selling.jpg">
     </div>
+    <hr class="hr_dot">
     <div id="content4">
-        <h1>I've Got My Eyes in you (B&N Exclusive Edition)</h1>\
+        <h1>I've Got My Eyes in you (B&N Exclusive Edition)</h1>
         <p>A new thriller from #1 New York Times bestselling author and "Queen of Suspense" Mary Higgins Clark. After a party when her parents are away, eighteen-year-old Kerry Dowling is found fully dressed at the bottome of the family pool. The immediate suspect is her boyfriend who had a bitter argument with her at the party. Then there is a twenty-year-old neighbor who was angry because she didn't invite him to the party.</p>
         <img src="mary.jpg">
     </div>
+    <hr class="hr_dot">
     <div id="feedback">
-        <h1>Send your feedback to us</h1>
-        <!--대충 텍스트 인풋-->
-
+        <p>Send your feedback to us</p>
+        <input type="text" class="feedback_input">
+        <br>
+        <button class="submit">Submit</button>
     </div>
+    <hr class="hr_dot">
+
     <div id="ADS">
-        <p>10% OFF $35+ | 15% OFF $60+ *USE CODE: HAPPYAPRIL</p>
+        <p>10% OFF $35+ | 15% OFF $60+<br> *USE CODE: HAPPYAPRIL</p>
     </div>
 
     <div id="footer">
-        <p>Barnes & Noble Bookseller, inc., Legal Department</p>
-        <p>122 Fifth Avenue</p>
-        <p>New York, NY 10011</p>
-        <p>Fax: (212) 463-5683</p>
-        <p>Locating: <a href="">Click Map</a></p>
+        <p class="foot_p">
+            Barnes & Noble Bookseller, inc., Legal Department<br>
+            122 Fifth Avenue<br>
+            New York, NY 10011 <br>
+            Fax: (212) 463-5683<br>
+        </p>
+        <p class="foot_locate">Location: <a href="">Click Map</a></p>
     </div>
 </body>
 </html>
