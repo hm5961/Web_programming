@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task5</title>
+</head>
+
+<body>
+    <label>Input : <input id="input" /></label>
+    <input type="button" value=Stack onclick="stack();"/>
+    <br/>
+    <input type="button" value=Show onclick="show();"/>
+
+
+    <script>
+        var cnt = 0;
+        var len;
+        var arr = new Array();
+
+        function stack() {
+            arr[cnt] = document.getElementById("input").value;
+            cnt++;
+        }
+
+        function show() {
+            for (len = 0; len < arr.length; len++) {
+                document.write(arr[len] + "</br>");
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,1 @@
+document.wtite("This is Outside JavaScript!");

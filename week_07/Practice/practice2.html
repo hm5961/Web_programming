@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>JavaScript String</h1>
+  <p>Original String:</p>
+  <p id="original"></p>
+
+  <p>Replaced String:</p>
+  <p id="replaced"></p>
+
+  <p>Re-Replaced String:</p>
+  <p id="replaced2"></p>
+
+  <script>
+    var str = 'best';
+    document.getElementById("original").innerHTML = str;
+
+    var ch1 = str[0];
+    var replaced1 = str.replace(ch1, 't');
+    document.getElementById("replaced").innerHTML = replaced1;
+    var sv;
+
+    function strcpy(str) {
+      var i = 0;
+      while(str[i] == sv[i])
+      {
+        sv[i] = str[i];
+        i++;
+      }
+
+    }
+    sv.strcpy(ch1);
+
+    var ch2 = sv[1];
+    var replaced2 = str.replace(ch2, '3');
+    document.getElementById("replaced2").innerHTML = replaced2;
+  </script>
+</body>
+</html>
