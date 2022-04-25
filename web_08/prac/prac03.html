@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Login</h3>
+<form>
+    ID: <input type="text" id="received_id" /><br />
+    PW: <input type="password" id="received_pw" /><br />
+
+    <input type="button" value=Login onclick="login();" />
+</form>
+
+<script>
+    function login()
+    {
+        var txt = document.getElementById("received_id").value;
+        var pw =document.getElementById("received_pw").value;
+
+        alert("ID : "+txt + " PW : "+ pw);
+    }
+</script>
+</body>
+</html>

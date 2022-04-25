@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <script>
+            for(var i = 1; i < 5; i++) {
+                document.write('<td id="target'+ i +'">td'+ i +'</td>');
+            }
+        </script>
+    </tr>
+    <tr>
+        <script>
+            for(var i = 5; i < 9; i++) {
+                document.write('<td id="target'+ i +'">td'+ i +'</td>');
+            }
+        </script>
+    </tr>
+</table>
+<input type="button" value="Change" onclick="Change();" />
+
+<script>
+    function Change()
+    {
+        var chny = document.getElementById("target4");
+        chny.style.backgroundColor = "yellow";
+    }
+</script>
+
+</body>
+</html>

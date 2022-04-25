@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            border: 2px dotted black;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1" onmouseover="OnMouseIn(this)" onmouseout="OnMouseOut(this)" onmousedown="OnMouseDown(this)" onmouseup="OnMouseUp(this)">
+    <p>OnMouse Event</p>
+</div>
+<script>
+    function OnMouseIn()
+    {
+        document.getElementById("div1").style.border = "3px solid red";
+    }
+    function OnMouseOut()
+    {
+        document.getElementById("div1").style.border = "";
+    }
+    function OnMouseDown()
+    {
+        document.getElementById("div1").style.backgroundColor = "yellow";
+    }
+    function OnMouseUp()
+    {
+        document.getElementById("div1").style.backgroundColor = "white";
+    }
+</script>
+</body>
+</html>

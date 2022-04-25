@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>The Document Object</h1>
+<h2>The querySelectorALL() Method</h2>
+
+<p> Add a background color all elements with class="example"</p>
+<h2 class = "example">A heading</h2>
+<p class = "example">A Paragraph</p>
+
+<script>
+    const collectionList1 = document.getElementsByTagName("h2");
+    for(let i = 0; i<collectionList1.length; i++)
+        collectionList1[i].style.background="blue";
+
+    const collectionList2 = document.getElementsByClassName("example");
+    for(let i = 0; i<collectionList2.length; i++)
+        collectionList2[i].style.background="yellow";
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <script>
+            for(var i = 1; i < 5; i++) {
+                document.write('<td><img class="table_image" src="test'+ i +'.jpg" /></td>');
+            }
+        </script>
+    </tr>
+    <input type="button" value="Change" onclick="Change()" />
+</table>
+
+<script>
+    function Change()
+    {
+        var chn = document.getElementsByClassName("table_image");
+        for(let i = 2; i<chn.length; i++)
+            chn[i].src = "test5.jpg"
+
+
+    }
+</script>
+</body>
+</html>

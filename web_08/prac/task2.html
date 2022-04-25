@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>The Document Object</h1>
+    <h2>DOM innerHTML Property</h2>
+
+    <p id="original">JavaScript DOM is fun to learn</p>
+
+    <button onclick="change()">Try it</button>
+    <p id="new"></p>
+
+    <script>
+        function change()
+        {
+            var chn = document.getElementById("original").innerHTML;
+            document.getElementById("new").innerHTML = chn;
+            document.getElementById("new").style.color = "green";
+            document.getElementById("new").style.fontSize = "50px";
+
+        }
+    </script>
+
+</body>
+</html>

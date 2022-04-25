@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th></th>
+        <th>Water</th>
+        <th>Air</th>
+        <th>Fire</th>
+        <th>Earth</th>
+    </tr>
+    <tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+        <script>
+            for(var i = 0; i < 5; i++) {
+                if(i == 0)
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Spring thunderclouds</td>');
+                else
+                document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Yes</td>');
+            }
+        </script>
+    </tr>
+    <tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+        <script>
+            for(var i = 0; i < 5; i++) {
+                if(i == 0)
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Roasting chestnuts</td>');
+                else
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Yes</td>');
+            }
+        </script>
+    </tr>
+    <tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+        <script>
+            for(var i = 0; i < 5; i++) {
+                if(i == 0)
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Winter snowbanks</td>');
+                else
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Yes</td>');
+            }
+        </script>
+    </tr>
+    <tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+        <script>
+            for(var i = 0; i < 5; i++) {
+                if(i == 0)
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Ice cream on a hot summer day</td>');
+                else
+                    document.write('<td onmouseover="ChangeBGC(this)" onmouseout="RestoreBGC(this)">Yes</td>');
+            }
+        </script>
+    </tr>
+    <script>
+        function ChangeBackgroundColor(line)
+        {
+            line.style.backgroundColor = "#8800FF";
+        }
+        function RestoreBackgroundColor(line)
+        {
+            line.style.backgroundColor = "";
+        }
+        function ChangeBGC(line)
+        {
+            line.style.backgroundColor = "#FF5588";
+        }
+        function RestoreBGC(line)
+        {
+            line.style.backgroundColor = "";
+        }
+
+    </script>
+</table>
+</body>
+</html>
