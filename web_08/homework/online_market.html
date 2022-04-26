@@ -3,8 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .head{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-image: url("grocery.jpg");
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            color: white;
+            z-index: 0;
+        }
+        .head::before{
+            content: "";
+            opacity: 0.6;
+            position: absolute;
+            top: 0px;
+            left: 0%;
+            right: 0px;
+            bottom: 0px;
+            width: 100%;
+            background-color: #000000;
+            z-index: -1;
+        }
+        .title{
+            margin-left: 100px;
+        }
+        .logout{
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            right: 100px;
+            top: 20px;
+        }
+        .menu{
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            height: 10%;
+            z-index: 1;
+        }
+        .menu li
+        {
+            float: left;
+            margin-left: 100px;
+
+        }
+        .menu hr{
+            border-color: #FF6600;
+            float: left;
+            width: 100%;
+            margin-bottom: 30px;
+
+        }
+        .menu ul{
+            list-style: none;
+            position: absolute;
+            left: 290px;
+            right: 290px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-<h1>market</h1>
+<div class="head">
+    <h1 class="title">Happy Shopping</h1>
+    <form>
+        <input type="button" class="logout" onclick="logout()" value="Logout">
+    </form>
+</div>
+
+<div class="menu">
+    <hr>
+    <ul>
+        <li><a href="best">BEST</a></li>
+        <li><a href="fruit">FRUIT</a></li>
+        <li><a href="vegetable">VEGETABLE</a></li>
+        <li><a href="diary">DAIRY</a></li>
+        <li><a href="cloth">CLOTH</a></li>
+        <li><a href="electronic">ELECTRONIC</a></li>
+        <li><a href="book">BOOK</a></li>
+    </ul>
+    <hr>
+</div>
+<script>
+    function logout()
+    {
+        open("login.html");
+        close("market.html");
+    }
+</script>
+
 </body>
 </html>
