@@ -41,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web_05" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,7 +53,7 @@
       <updated>1650845949091</updated>
       <workItem from="1650846412857" duration="1187000" />
       <workItem from="1650848145318" duration="324000" />
-      <workItem from="1650848507424" duration="4614000" />
+      <workItem from="1650848507424" duration="7441000" />
     </task>
     <servers />
   </component>
