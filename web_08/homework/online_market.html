@@ -14,6 +14,7 @@
             top: 0px;
             background-image: url("grocery.jpg");
             width: 100%;
+            min-width: 1800px;
             height: 100%;
             background-repeat: no-repeat;
             background-size: 100%;
@@ -50,29 +51,59 @@
             width: 100%;
             height: 10%;
             z-index: 1;
+            text-align: center;
+            min-width: 1800px;
+            font-family: sans-serif;
+            font-weight: bold;
         }
         .menu li
         {
-            float: left;
-            margin-left: 100px;
-
+            display: inline-block;
+            margin-right: 8%;
+            margin-top: 10px;
         }
-        .menu hr{
-            border-color: #FF6600;
+        .menu hr {
+            border-color: #FF0000;
+            border-left: 0px;
+            border-right: 0px;
             float: left;
             width: 100%;
-            margin-bottom: 30px;
-
+            margin-bottom: 50px;
+            border-style: dotted;
+        }
+        .menu a:hover{
+            color: #FF0000;
         }
         .menu ul{
             list-style: none;
             position: absolute;
-            left: 290px;
-            right: 290px;
+            left: 20%;
+            right: 20%;
         }
-        .menu a{
+        .menu a {
             text-decoration: none;
             color: black;
+        }
+        .main{
+            position: absolute;
+            top: 110%;
+            width: 100%;
+            left: 430px;
+            min-width: 1800px;
+        }
+        .select{
+            border: 3px solid black;
+            display: inline-block;
+            text-align: center;
+        }
+        .select img{
+            width: 200px;
+            height: 200px;
+        }
+        .fruit{
+            display: inline-block;
+            padding: 0px;
+            margin: 30px;
         }
     </style>
 </head>
@@ -96,6 +127,122 @@
         <li><a href="book">BOOK</a></li>
     </ul>
     <hr>
+</div>
+
+<div class="main">
+    <h2>BEST FRUIT</h2>
+
+    <div class="fruit">
+        <p>1</p>
+        <div class="select">
+            <img src="apple.jpg">
+            <p>apple</p>
+            <p>5 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>2</p>
+        <div class="select">
+            <img src="banana.jpg">
+            <p>banana</p>
+            <p>6 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>3</p>
+        <div class="select">
+            <img src="orange.jpg">
+            <p>orange</p>
+            <p>4 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>4</p>
+        <div class="select">
+            <img src="watermelon.jpg">
+            <p>watermelon</p>
+            <p>10 $</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="fruit">
+        <p>5</p>
+        <div class="select">
+            <img src="kiwi.jpg">
+            <p>kiwi</p>
+            <p>5 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>6</p>
+        <div class="select">
+            <img src="Strawberry.jpg">
+            <p>Strawberry</p>
+            <p>6 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>7</p>
+        <div class="select">
+            <img src="fig.jpg">
+            <p>fig</p>
+            <p>4 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>8</p>
+        <div class="select">
+            <img src="reddragon.jpg">
+            <p>reddragon</p>
+            <p>10 $</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="fruit">
+        <p>5</p>
+        <div class="select">
+            <img src="murberry.jpg">
+            <p>murberry</p>
+            <p>5 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>6</p>
+        <div class="select">
+            <img src="plum.jpg">
+            <p>plum</p>
+            <p>6 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>7</p>
+        <div class="select">
+            <img src="peach.jpg">
+            <p>peach</p>
+            <p>4 $</p>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <p>8</p>
+        <div class="select">
+            <img src="papaya.jpg">
+            <p>papaya</p>
+            <p>10 $</p>
+        </div>
+    </div>
 </div>
 <script>
     function logout()
