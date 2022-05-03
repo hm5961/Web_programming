@@ -126,6 +126,9 @@
         }
         .banner{
             position: fixed;
+            position: absolute;
+            right: 0px;
+            bottom: 200px;
         }
     </style>
 </head>
@@ -137,7 +140,7 @@
     </form>
 </div>
 
-<div class="menu">
+<div class="menu" id="top">
     <hr>
     <ul>
         <li><a href="best">BEST</a></li>
@@ -311,10 +314,17 @@
 </div>
 
 <div class="banner">
-
+    <table>
+        <tr>
+            <th><a href="#top">TOP</a></th> <!---->
+        </tr>
+        <tr>
+            <th><a href="#bottom">BOTTOM</a><th>
+        </tr>
+    </table>
 </div>
 
-<div class="foot">
+<div class="foot" id="bottom">
     <h4>This is WebProgramming Homework</h4>
 </div>
 
