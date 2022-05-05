@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44b147b-968f-4d8a-89d9-c24f1f2e9742" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_07/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_07/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online_market.html" beforeDir="false" afterPath="$PROJECT_DIR$/online_market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prac/prac04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../prac/prac04.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prac/prac05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../prac/prac05.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prac/prac2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../prac/prac2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web_07" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -37,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651582697511</updated>
       <workItem from="1651582698660" duration="967000" />
-      <workItem from="1651739272901" duration="6692000" />
+      <workItem from="1651739272901" duration="7362000" />
     </task>
     <servers />
   </component>

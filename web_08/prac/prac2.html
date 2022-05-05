@@ -12,16 +12,14 @@
     <li class="fun">List item with class 4</li>
     <li class="fun">List item with class 5</li>
 </ul>
-<button>
+<button onclick="btncli()">
     Click
 </button>
 
 <script>
     function btncli()
     {
-        const alr = document.getElementsByClassName("fun")[2].innerHTML;
-
-        alert(alr);
+        alert(document.getElementsByClassName("fun")[2].innerHTML);
     }
 </script>
 </body>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1b844b4-62a0-4dd1-898d-1538b69b2eab" name="변경" comment="" />
+    <list default="true" id="b1b844b4-62a0-4dd1-898d-1538b69b2eab" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../web_07/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_07/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/homework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/online_market.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/online_market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prac/prac04.html" beforeDir="false" afterPath="$PROJECT_DIR$/prac/prac04.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prac/prac05.html" beforeDir="false" afterPath="$PROJECT_DIR$/prac/prac05.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prac/prac2.html" beforeDir="false" afterPath="$PROJECT_DIR$/prac/prac2.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +80,7 @@
       <workItem from="1651551527226" duration="645000" />
       <workItem from="1651630734265" duration="1475000" />
       <workItem from="1651637825134" duration="1295000" />
+      <workItem from="1651751944238" duration="2391000" />
     </task>
     <servers />
   </component>

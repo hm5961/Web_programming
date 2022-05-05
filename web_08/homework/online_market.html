@@ -364,29 +364,23 @@
         open("login.html");
         close("market.html");
     }
-    var sel_fruit = [" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "];
-    var li_fruit = ["Apple ", "Banana ","Orange ", "Watermelon ",
-        "Kiwi ", "Strawberry ", "Fig ", "Reddregon ",
-    "Murberry ", "Cherry ", "Peach ", "Papaya ",
-    "Pineapple ", "Avocado ","Plum",  "Raspberry "];
+    var sel_fruit = [];
+    var li_fruit = ["Apple ", "Banana ", "Orange ", "Watermelon ", "Kiwi ", "Strawberry ", "Fig ", "Reddragon ", "Murberry ", "Cherry ", "Peach ", "Papaya ","Pineapple ", "Avocado ", "Plum ", "Raspberry "];
     var sum_money = 0;
     var fruit = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    var li_money = [5, 6, 4, 10, 5, 7, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     function apple_checked() {
         if (fruit[0] == 0)
         {
             document.getElementById("apple").style.backgroundColor="red";
             document.getElementById("apple_img").src="check.png";
-            sel_fruit[0] = li_fruit[0];
-            sum_money += 5;
             fruit[0] = 1;
         }
         else
         {
             document.getElementById("apple").style.backgroundColor="white";
             document.getElementById("apple_img").src="apple.jpg";
-            sel_fruit[0] = "";
-            sum_money -= 5;
             fruit[0] = 0;
         }
     }
@@ -397,16 +391,12 @@
         {
             document.getElementById("banana").style.backgroundColor="red";
             document.getElementById("banana_img").src="check.png";
-            sel_fruit[1] = li_fruit[1];
-            sum_money += 6;
             fruit[1] = 1;
         }
         else
         {
             document.getElementById("banana").style.backgroundColor="white";
             document.getElementById("banana_img").src="banana.jpg";
-            sel_fruit[1] = "";
-            sum_money -= 6;
             fruit[1] = 0;
         }
     }
@@ -417,16 +407,12 @@
         {
             document.getElementById("orange").style.backgroundColor="red";
             document.getElementById("orange_img").src="check.png";
-            sel_fruit[2] = li_fruit[2];
-            sum_money += 4;
             fruit[2] = 1;
         }
         else
         {
             document.getElementById("orange").style.backgroundColor="white";
             document.getElementById("orange_img").src="orange.jpg";
-            sel_fruit[2] = "";
-            sum_money -= 4;
             fruit[2] = 0;
         }
     }
@@ -437,16 +423,12 @@
         {
             document.getElementById("watermelon").style.backgroundColor="red";
             document.getElementById("watermelon_img").src="check.png";
-            sel_fruit[3] = li_fruit[3];
-            sum_money += 10;
             fruit[3] = 1;
         }
         else
         {
             document.getElementById("watermelon").style.backgroundColor="white";
             document.getElementById("watermelon_img").src="watermelon.png";
-            sel_fruit[3] = "";
-            sum_money -= 10;
             fruit[3] = 0;
         }
     }
@@ -457,16 +439,12 @@
         {
             document.getElementById("kiwi").style.backgroundColor="red";
             document.getElementById("kiwi_img").src="check.png";
-            sel_fruit[4] = li_fruit[4];
-            sum_money += 5;
             fruit[4] = 1;
         }
         else
         {
             document.getElementById("kiwi").style.backgroundColor="white";
             document.getElementById("kiwi_img").src="kiwi.jpg";
-            sel_fruit[4] = "";
-            sum_money -= 5;
             fruit[4] = 0;
         }
     }
@@ -477,16 +455,12 @@
         {
             document.getElementById("strawberry").style.backgroundColor="red";
             document.getElementById("strawberry_img").src="check.png";
-            sel_fruit[5] = li_fruit[5];
-            sum_money += 7;
             fruit[5] = 1;
         }
         else
         {
             document.getElementById("strawberry").style.backgroundColor="white";
             document.getElementById("strawberry_img").src="strawberry.png";
-            sel_fruit[5] = "";
-            sum_money -= 7;
             fruit[5] = 0;
         }
     }
@@ -497,16 +471,12 @@
         {
             document.getElementById("fig").style.backgroundColor="red";
             document.getElementById("fig_img").src="check.png";
-            sel_fruit[6] = li_fruit[6];
-            sum_money += 1;
             fruit[6] = 1;
         }
         else
         {
             document.getElementById("fig").style.backgroundColor="white";
             document.getElementById("fig_img").src="fig.jpg";
-            sel_fruit[6] = "";
-            sum_money -= 1;
             fruit[6] = 0;
         }
     }
@@ -517,16 +487,12 @@
         {
             document.getElementById("reddragon").style.backgroundColor="red";
             document.getElementById("reddragon_img").src="check.png";
-            sel_fruit[7] = li_fruit[7];
-            sum_money += 2;
             fruit[7] = 1;
         }
         else
         {
             document.getElementById("reddragon").style.backgroundColor="white";
             document.getElementById("reddragon_img").src="reddragon.jpg";
-            sel_fruit[7] = "";
-            sum_money -= 2;
             fruit[7] = 0;
         }
     }
@@ -537,16 +503,12 @@
         {
             document.getElementById("murberry").style.backgroundColor="red";
             document.getElementById("murberry_img").src="check.png";
-            sel_fruit[8] = li_fruit[8];
-            sum_money += 3;
             fruit[8] = 1;
         }
         else
         {
             document.getElementById("murberry").style.backgroundColor="white";
             document.getElementById("murberry_img").src="murberry.jpg";
-            sel_fruit[8] = "";
-            sum_money -= 3;
             fruit[8] = 0;
         }
     }
@@ -557,16 +519,12 @@
         {
             document.getElementById("cherry").style.backgroundColor="red";
             document.getElementById("cherry_img").src="check.png";
-            sel_fruit[9] = li_fruit[9];
-            sum_money += 4;
             fruit[9] = 1;
         }
         else
         {
             document.getElementById("cherry").style.backgroundColor="white";
             document.getElementById("cherry_img").src="cherry.jpg";
-            sel_fruit[9] = "";
-            sum_money -= 4;
             fruit[9] = 0;
         }
     }
@@ -577,16 +535,12 @@
         {
             document.getElementById("peach").style.backgroundColor="red";
             document.getElementById("peach_img").src="check.png";
-            sel_fruit[10] = li_fruit[10];
-            sum_money += 5;
             fruit[10] = 1;
         }
         else
         {
             document.getElementById("peach").style.backgroundColor="white";
             document.getElementById("peach_img").src="peach.jpg";
-            sel_fruit[10] = "";
-            sum_money -= 5;
             fruit[10] = 0;
         }
     }
@@ -597,16 +551,12 @@
         {
             document.getElementById("papaya").style.backgroundColor="red";
             document.getElementById("papaya_img").src="check.png";
-            sel_fruit[11] = li_fruit[11];
-            sum_money += 6;
             fruit[11] = 1;
         }
         else
         {
             document.getElementById("papaya").style.backgroundColor="white";
             document.getElementById("papaya_img").src="papaya.jpg";
-            sel_fruit[11] = "";
-            sum_money -= 6;
             fruit[11] = 0;
         }
     }
@@ -617,16 +567,12 @@
         {
             document.getElementById("pineapple").style.backgroundColor="red";
             document.getElementById("pineapple_img").src="check.png";
-            sel_fruit[12] = li_fruit[12];
-            sum_money += 7;
             fruit[12] = 1;
         }
         else
         {
             document.getElementById("pineapple").style.backgroundColor="white";
             document.getElementById("pineapple_img").src="pineapple.jpg";
-            sel_fruit[12] = "";
-            sum_money -= 7;
             fruit[12] = 0;
         }
     }
@@ -637,16 +583,12 @@
         {
             document.getElementById("avocado").style.backgroundColor="red";
             document.getElementById("avocado_img").src="check.png";
-            sel_fruit[13] = li_fruit[13];
-            sum_money += 8;
             fruit[13] = 1;
         }
         else
         {
             document.getElementById("avocado").style.backgroundColor="white";
             document.getElementById("avocado_img").src="avocado.jpg";
-            sel_fruit[13] = "";
-            sum_money -= 8;
             fruit[13] = 0;
         }
     }
@@ -657,16 +599,12 @@
         {
             document.getElementById("plum").style.backgroundColor="red";
             document.getElementById("plum_img").src="check.png";
-            sel_fruit[14] = li_fruit[14];
-            sum_money += 9;
             fruit[14] = 1;
         }
         else
         {
             document.getElementById("plum").style.backgroundColor="white";
             document.getElementById("plum_img").src="plum.jpg";
-            sel_fruit[14] = "";
-            sum_money -= 9;
             fruit[14] = 0;
         }
     }
@@ -677,22 +615,32 @@
         {
             document.getElementById("raspberry").style.backgroundColor="red";
             document.getElementById("raspberry_img").src="check.png";
-            sel_fruit[15] = li_fruit[15];
-            sum_money += 10;
             fruit[15] = 1;
         }
         else
         {
             document.getElementById("raspberry").style.backgroundColor="white";
             document.getElementById("raspberry_img").src="raspberry.jpg";
-            sel_fruit[15] = "";
-            sum_money -= 10;
             fruit[15] = 0;
         }
     }
 
     function buy() {
-        alert(sel_fruit + "is(are) selected!" + '\n' + "Total : " + sum_money + "$");
+        sum_money = 0;
+        sel_fruit = "";
+        for (let i = 0; i<16; i++)
+        {
+            if(fruit[i]==1)
+            {
+                sel_fruit +=li_fruit[i];
+                sum_money +=li_money[i];
+            }
+        }
+
+        if(sum_money == 0)
+            alert("Please select item!")
+        else
+            alert(sel_fruit + "is(are) selected!" + '\n' + "Total : " + sum_money + "$");
     }
 
     function go_to_top(){

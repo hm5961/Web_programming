@@ -5,18 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<p><a id="myAnchor" href="https://www.google.com">Google</a></p>
+<p><a id="link" href="https://www.google.com">Google</a></p>
 
 <p>Click the button to display the value of the href attribute of the link above.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="try_it()">Try it</button>
 
-<p id="demo"></p>
+<p id="out"></p>
 
 <script>
-    function myFunction(){
-        var change = document.getElementById("myAnchor").href;
-        document.getElementById("demo").innerHTML = change;
+    function try_it(){
+        var change = document.getElementById("link").href;
+        document.getElementById("out").innerHTML = change;
     }
 </script>
 </body>
