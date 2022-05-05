@@ -14,7 +14,7 @@
             top: 0px;
             background-image: url("grocery.jpg");
             width: 100%;
-            min-width: 1800px;
+            min-width: 1980px;
             height: 100%;
             background-repeat: no-repeat;
             background-size: 100%;
@@ -34,7 +34,11 @@
             z-index: -1;
         }
         .title{
-            margin-left: 100px;
+            position: absolute;
+            left: 100px;
+            top: 20px;
+            color: white;
+            z-index: 1;
         }
         .logout{
             background: none;
@@ -44,23 +48,23 @@
             position: absolute;
             right: 100px;
             top: 20px;
+            z-index: 1;
         }
         .menu{
             position: absolute;
             top: 100%;
             width: 100%;
-            height: 10%;
             z-index: 1;
             text-align: center;
-            min-width: 1800px;
+            min-width: 990px;
             font-family: sans-serif;
             font-weight: bold;
         }
         .menu li
         {
             display: inline-block;
-            margin-right: 8%;
-            margin-top: 10px;
+            margin-right: 50px;
+            margin-top: 12px;
         }
         .menu hr {
             border-color: #FF0000;
@@ -77,8 +81,7 @@
         .menu ul{
             list-style: none;
             position: absolute;
-            left: 25%;
-            right: 25%;
+            left: calc((100% - 990px)/2 + 100px);
         }
         .menu a {
             text-decoration: none;
@@ -87,8 +90,8 @@
         .main{
             position: absolute;
             top: 110%;
-            width: 60%;
-            left: 25%;
+            width: 990px;
+            left: calc((100% - 990px)/2);
             min-width: 1400px;
         }
         .select{
@@ -100,23 +103,25 @@
             border: 3px solid red;
         }
         .select img{
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
         }
         .fruit{
             display: inline-block;
             padding: 0px;
-            margin: 30px;
+            margin: 20px;
         }
         .button{
             border: 3px solid steelblue;
-            width: 1280px;
+            width: 100%;
             text-align: center;
             background-color: cornflowerblue;
+            position: absolute;
+            left: calc((100% - 990px)/2 - 410px);
         }
         .foot{
             position: absolute;
-            top: 320%;
+            top: 241%;
             border: 3px solid forestgreen;
             width: 100%;
             text-align: center;
@@ -126,49 +131,65 @@
         }
         .banner{
             position: fixed;
-            right: 0px;
+            right: 20px;
             bottom: 200px;
-            background-color: steelblue;
-            text-decoration: none;
-            color: red;
-            border: 3px solid slateblue;
+            background-color: aquamarine;
+            width: 100px;
+            height: 200px;
+            z-index: 3;
         }
-        .banner hr{
+        .go_top{
+            border: 1px solid white;
             position: absolute;
-            top: 37%;
-            width: 100%;
-            border-color: slateblue;
-            border-collapse: collapse;
-            display: inline-block;
+            height: 80px;
+            text-align: center;
+            width: 100px;
+            padding-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        .go_bot{
+            border: 1px solid white;
+            position: absolute;
+            top: 100px;
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            padding-top: 20px;
+            color: red;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 <div class="head">
-    <h1 class="title">Happy Shopping</h1>
-    <form>
-        <input type="button" class="logout" onclick="logout()" value="Logout">
-    </form>
 </div>
+    <div class="head_in">
+
+        <h1 class="title">Happy Shopping</h1>
+        <form>
+            <input type="button" class="logout" onclick="logout()" value="Logout">
+        </form>
+    </div>
 
 <div class="menu" id="top">
     <hr>
     <ul>
-        <li><a href="best">BEST</a></li>
-        <li><a href="fruit">FRUIT</a></li>
-        <li><a href="vegetable">VEGETABLE</a></li>
-        <li><a href="diary">DAIRY</a></li>
-        <li><a href="cloth">CLOTH</a></li>
-        <li><a href="electronic">ELECTRONIC</a></li>
-        <li><a href="book">BOOK</a></li>
+        <li><a href="#best">BEST</a></li>
+        <li><a href="#fruit">FRUIT</a></li>
+        <li><a href="#vegetable">VEGETABLE</a></li>
+        <li><a href="">DAIRY</a></li>
+        <li><a href="">CLOTH</a></li>
+        <li><a href="">ELECTRONIC</a></li>
+        <li><a href="">BOOK</a></li>
     </ul>
     <hr>
 </div>
 
 <div class="main">
-    <h2>BEST FRUIT</h2>
+    <h2 id="best">BEST FRUIT</h2>
 
-    <div class="fruit">
+    <div class="fruit" id="fruit">
         <p>1</p>
         <div class="select", id="apple", onclick="apple_checked()">
             <img id="apple_img", src="apple.jpg">
@@ -198,7 +219,7 @@
     <div class="fruit">
         <p>4</p>
         <div class="select", id="watermelon", onclick="watermelon_checked()">
-            <img id="watermelon_img", src="watermelon.jpg">
+            <img id="watermelon_img", src="watermelon.png">
             <p>Watermelon</p>
             <p>10 $</p>
         </div>
@@ -216,9 +237,9 @@
     </div>
 
     <div class="fruit">
-        <p>6</p>
+        <p id="vegetable">6</p>
         <div class="select", id="strawberry", onclick="strawberry_checked()">
-            <img id="strawberry_img", src="strawberry.jpg">
+            <img id="strawberry_img", src="strawberry.png">
             <p>Strawberry</p>
             <p>7 $</p>
         </div>
@@ -325,17 +346,12 @@
 </div>
 
 <div class="banner">
-    <table>
-        <tr>
-            <th><a href="#top">▲TOP</a></th> <!---->
-        </tr>
-        <tr>
-            <hr>
-        </tr>
-        <tr>
-            <th><a href="#bottom">▼BOTTOM</a><th>
-        </tr>
-    </table>
+    <div class="go_top" onclick="go_to_top()">
+        <p>TOP</p>
+    </div>
+    <div class="go_bot" onclick="go_to_bot()">
+        <p>BOTTOM</p>
+    </div>
 </div>
 
 <div class="foot" id="bottom">
@@ -677,6 +693,13 @@
 
     function buy() {
         alert(sel_fruit + "is(are) selected!" + '\n' + "Total : " + sum_money + "$");
+    }
+
+    function go_to_top(){
+        document.getElementById('top').scrollIntoView();
+    }
+    function go_to_bot(){
+        document.getElementById('bottom').scrollIntoView();
     }
 </script>
 
