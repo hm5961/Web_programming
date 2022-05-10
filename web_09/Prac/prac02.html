@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="map" style="width:800px; height: 500px"></div>
+
+<script>
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var myCenter = new google.maps.LatLng(37.5283, 127.0583);
+        var gwangju = new google.maps.LatLng(35.1283, 126.8583);
+        var busan = new google.maps.LatLng(35.1283, 129.1583);
+        var mapOptions = {
+            center: myCenter,
+            zoom: 5
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            map: map
+        });
+
+        var marker_g = new google.maps.Marker({
+            position: gwangju,
+            map: map
+        });
+
+
+        var marker_b = new google.maps.Marker({
+            position: busan,
+            map: map
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=API_CODE&callback=myMap"></script>
+
+</body>
+</html>

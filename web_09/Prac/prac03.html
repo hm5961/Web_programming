@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="map" style="width:800px; height: 500px"></div>
+
+<script>
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var myCenter = new google.maps.LatLng(37.5283, 127.0583);
+        var mapOptions = {
+            center: myCenter,
+            zoom: 7
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var loop_marker[5];
+        var x[5] = [37.5666791,35.1799528,35.8713,36.3496,35.1594647];
+        var y[5] = [126.9782914,129.0752365,128.6018,127.4583,129.1583];
+        var posi[5];
+        for(int i = 0; i<5; i++)
+        {
+            loop_marker[i] = new google.maps.Marker({
+            x[i],y[i]
+        })
+        }
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=API_CODE&callback=myMap"></script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #map1{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        }
+        #map2{
+            position: relative;
+            left: 500px;
+            top: -800px;
+        }
+        #map3{
+            position: relative;
+            left: 1000px;
+            top: -1600px;
+        }
+        body{
+            margin: 0px;
+        }
+        .header{
+            background-color: yellowgreen;
+            width: 100%;
+            height: 100px;
+        }
+        .menubar{
+            background-color: slateblue;
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class = "header">
+    <h1>Burger Indices Calculator by Google Map</h1>
+    <p></p>
+</div>
+<div class = "menubar">
+</div>
+
+<div class = "content">
+    <h1>1. 도시발전지수 2. 버거지수 3. 일치도</h1>
+    <div id="map1" style="width:500px; height: 800px"></div>
+    <div id="map2" style="width:500px; height: 800px"></div>
+    <div id="map3" style="width:500px; height: 800px"></div>
+    <div id="calc" >
+        <form>
+            <label>population</label>
+            <input>
+        </form>
+
+    </div>
+</div>
+<div class= "footer"></div>
+<script>
+    var	regional_development_indices	=	[
+        [	51592660	,	9500480	,	3340214	,	2378573	,	2953260	,	1436916	,	1449360	,	1117204	,	378196	,	13577808	,	1539038	,	1597284	,	2119296	,	1780824	,	1828550	,	2617552	,	3300692	,	677413	]	,//인구
+        [	23617091	,	4455106	,	1553032	,	1069411	,	1308777	,	648653	,	668599	,	484641	,	157270	,	5880097	,	751554	,	767041	,	1009254	,	852086	,	906664	,	1282737	,	1512847	,	309322	]	,//세대
+        [	3730	,	4536.5	,	2742	,	2385	,	3047	,	2777	,	2888	,	6277.5	,	3607.5	,	3621.5	,	3214.5	,	4317.5	,	5206	,	2920.5	,	4379.5	,	3995.5	,	3357.5	,	2993	]	,//지역 내 총 생산
+        [	2080	,	2375	,	2003.5	,	1965	,	1973	,	2091	,	2092.5	,	2305.5	,	2049	,	2081.5	,	1960.5	,	1932	,	1948	,	1937.5	,	1940.5	,	1911.5	,	1925	,	1932.5	]	,//개인 소득
+        [	1763	,	2157.5	,	1772	,	1753	,	1623	,	1784.5	,	1781	,	1809.5	,	1637	,	1704.5	,	1649	,	1547.5	,	1563	,	1573	,	1585.5	,	1579.5	,	1610.5	,	1656	]	,//민간 소비
+        [	3760.5	,	4883.5	,	2948	,	2781.5	,	3244.5	,	3108	,	3164	,	5364.5	,	3730	,	3868.5	,	2914.5	,	3514.5	,	4112	,	2894.5	,	3722.5	,	3517	,	3183.5	,	3045	]	//지역 총 소득
+    ]	;
+    var	burger_indices	=	[
+        [	441	,	110	,	29	,	21	,	23	,	16	,	15	,	9	,	6	,	106	,	9	,	12	,	9	,	15	,	7	,	27	,	26	,	8	]	,//버거킹
+        [	405	,	95	,	41	,	25	,	18	,	10	,	12	,	10	,	0	,	98	,	7	,	8	,	10	,	11	,	8	,	15	,	29	,	14	]	,//맥도날드
+        [	1288	,	175	,	79	,	63	,	71	,	48	,	47	,	31	,	12	,	319	,	50	,	57	,	66	,	51	,	51	,	68	,	86	,	2	]	,//롯데리아
+        [	193	,	73	,	9	,	10	,	12	,	4	,	5	,	2	,	1	,	52	,	3	,	4	,	5	,	1	,	2	,	4	,	4	,	3	]	,//kfc
+        [	490	,	161	,	44	,	21	,	25	,	15	,	22	,	13	,	2	,	119	,	0	,	3	,	16	,	5	,	3	,	5	,	33	,	29	]	,//서브웨이
+        [	1600	,	169	,	109	,	65	,	169	,	28	,	43	,	169	,	15	,	310	,	57	,	59	,	73	,	35	,	73	,	77	,	120	,	0	]	,//맘스터치
+        [	21	,	3	,	1	,	0	,	3	,	0	,	1	,	0	,	0	,	9	,	0	,	1	,	0	,	0	,	1	,	1	,	1	,	0	]	,//ufo버거
+        [	154	,	43	,	12	,	16	,	15	,	0	,	0	,	3	,	0	,	48	,	0	,	0	,	0	,	0	,	0	,	10	,	7	,		]//노브랜드버거
+    ]	;
+
+    var location_info = [
+        [			36.244125	,	127.789637		,	"	ROK	"	        ,	'	rok	.	png	'	]	,
+        [			37.540705	,	126.956764		,	"	Seoul	"	    ,	'	seoul	.	png	'	]	,
+        [			35.198362	,	129.053922		,	"	Busan	"	    ,	'	busan	.	png	'	]	,
+        [			35.798838	,	128.583052		,	"	Daegu	"	    ,	'	daegu	.	png	'	]	,
+        [			37.469221	,	126.573234		,	"	Incheon	"	    ,	'	incheon	.	png	'	]	,
+        [			35.126033	,	126.831302		,	"	Gwangju	"	    ,	'	gwangju	.	png	'	]	,
+        [			36.321655	,	127.378953		,	"	Daejeon	"	    ,	'	daejeon	.	png	'	]	,
+        [			35.519301	,	129.239078		,	"	Ulsan	"	    ,	'	ulsan	.	png	'	]	,
+        [			36.500000	,	127.266667		,	"	Sejong	"	    ,	'	sejong	.	png	'	]	,
+        [			37.567167	,	127.190292		,	"	Gyeonggi	"	,	'	gyeonggi	.	png	'	]	,
+        [			37.555837	,	128.209315		,	"	Gangwon	"	    ,	'	gangwon	.	png	'	]	,
+        [			36.628503	,	127.929344		,	"	Chung-buk	"	,	'	chung-buk	.	png	'	]	,
+        [			36.557229	,	126.779757		,	"	Chung-nam	"	,	'	chung-nam	.	png	'	]	,
+        [			35.716705	,	127.144185		,	"	Jeon-buk	"	,	'	jeon-buk	.	png	'	]	,
+        [			34.819400	,	126.893113		,	"	Jeon-nam	"	,	'	jeon-nam	.	png	'	]	,
+        [			36.248647	,	128.664734		,	"	Gyeong-buk	"	,	'	gyeong-buk	.	png	'	]	,
+        [			35.259787	,	128.664734		,	"	Gyeong-nam	"	,	'	gyeong-nam	.	png	'	]	,
+        [			33.364805	,	126.542671		,	"	Jeju	"	    ,	'	jeju	.	png	'	]
+
+    ];
+
+    var region_div = [1011.620784,463.0802157,1.220901961,0.674970588,0.564431373,1.176392157];
+
+    var burger_div = [0.008647059,0.007941176,0.025254902,0.003784314,0.009607843,0.031372549,0.000411765,0.003019608];
+
+    function myMap() {
+        var mapCanvas1 = document.getElementById("map1");
+        var mapCanvas2 = document.getElementById("map2");
+        var mapCanvas3 = document.getElementById("map3");
+
+        var location =[];
+        for(let i = 0; i<location_info.length; i++)
+        {
+            location[i] = new google.maps.LatLng(location_info[i][0],location_info[i][1]);
+        }
+        var mapOptions = {
+            center: location[0],
+            zoom: 7.2
+        };
+        var map1 = new google.maps.Map(mapCanvas1, mapOptions);
+        var map2 = new google.maps.Map(mapCanvas2, mapOptions);
+        var map3 = new google.maps.Map(mapCanvas3, mapOptions);
+
+        function calc1(){
+            var percentage =
+                [
+                    document.getElementById("population").value,
+                    document.getElementById("household").value,
+                    document.getElementById("GRDP").value,
+                    document.getElementById("GNI_per_person").value,
+                    document.getElementById("consumption").value,
+                    document.getElementById("GNI_per_region").value
+                ];
+
+            for (let j = 1; j<18; j++) {
+                var rad = 0;
+                for(let i = 0;i<6;i++)
+                {
+                    rad += ((percentage[i] * regional_development_indices[i][j])    /   (region_div[i]/(100-percentage[i])));
+                }
+                var region = new google.maps.Circle({
+                    center: location[j],
+                    radius: 5000,
+                    strokeColor: "#FF5733",
+                    strokeOpacity: 0.5,
+                    strokeWeight: 3,
+                    fillColor: "#FF5733",
+                    fillOpacity: 0.5
+                });
+                region.setMap(map1);
+            }
+        };
+        for (let i = 1; i<18; i++)
+        {
+
+            var popul = new google.maps.Circle({
+                center: location[i],
+                radius: populization[i]/100,
+                strokeColor: "#FF5733",
+                strokeOpacity: 0.5,
+                strokeWeight: 3,
+                fillColor: "#FF5733",
+                fillOpacity: 0.5
+            });
+            var house = new google.maps.Circle({
+                center: location[i],
+                radius: household[i]/50,
+                strokeColor: "#57FF33",
+                strokeOpacity: 0.5,
+                strokeWeight: 3,
+                fillColor: "#57FF33",
+                fillOpacity: 0.5
+            });
+            marker1 = new google.maps.Marker({
+                position: location[i],
+                map: map1
+            });
+            marker2 = new google.maps.Marker({
+                position: location[i],
+                map: map2
+            });
+
+            infowindow = new google.maps.InfoWindow({
+                content:
+                    "<p>" + location_info[i][2] +  "</p>" +
+                    "<img src = '" + location_info[i][3] + "'>"
+            });
+            popul.setMap(map1);
+            house.setMap(map2);
+            //infowindow.open(map,marker);
+        }
+
+    };
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_CODE&callback=myMap"></script>
+</body>
+</html>
