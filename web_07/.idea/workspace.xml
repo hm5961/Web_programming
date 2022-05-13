@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c90e539-7ca6-4418-af85-964371a339d1" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_08/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_08/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_08/homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_08/homework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_08/homework/online_market.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web_08/homework/online_market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_08/prac/prac04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web_08/prac/prac04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_08/prac/prac05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web_08/prac/prac05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_08/prac/prac2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web_08/prac/prac2.html" afterDir="false" />
-    </list>
+    <list default="true" id="3c90e539-7ca6-4418-af85-964371a339d1" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

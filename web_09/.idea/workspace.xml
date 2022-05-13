@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cbcdbd6-0f97-4ef2-ba2e-59b98cfb1951" name="변경" comment="" />
+    <list default="true" id="5cbcdbd6-0f97-4ef2-ba2e-59b98cfb1951" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../web_07/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_07/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/burger.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/burger.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Prac" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/homework" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -61,6 +65,9 @@
       <workItem from="1652162661218" duration="12410000" />
       <workItem from="1652187649642" duration="80000" />
       <workItem from="1652190336899" duration="128000" />
+      <workItem from="1652193386143" duration="421000" />
+      <workItem from="1652322872740" duration="4763000" />
+      <workItem from="1652341971616" duration="1188000" />
     </task>
     <servers />
   </component>
