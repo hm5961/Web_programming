@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .imgbox{
+            position: relative;
+            left: 0px;
+            top: 200px;
+            float: left;
+        }
+        .addtxt{
+            position: absolute;
+            left: 0px;
+            bottom: 5px;
+            background-color: black;
+            color: white;
+            display: inline-block;
+            opacity: 0.7;
+
+        }
+    </style>
+</head>
+<body>
+<h1>welcome to my personal website</h1>
+<p>click on image below to see about me</p>
+<div class="imgbox" >
+    <img src="img_avatar.png">
+    <div class="addtxt" ><font>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</font></div>
+</div>
+
+
+<div class="imgbox" >
+    <img src="img_avatar.png">
+    <div class="addtxt" ><font>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</font></div>
+</div>
+
+<div class="imgbox" >
+    <img src="img_avatar.png">
+    <div class="addtxt" ><font>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</font></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $(".imgbox").mouseenter(function (){
+            $(".addtxt",this).slideDown("slow");
+        });
+        $(".imgbox").mouseleave(function (){
+            $(".addtxt",this).slideUp("slow");
+        });
+    });
+
+
+</script>
+</body>
+</html>
