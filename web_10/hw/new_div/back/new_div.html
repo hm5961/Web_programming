@@ -221,6 +221,16 @@
                  */
 
                 .youtube{
+                    position: absolute;
+                    border: 1px solid black;
+                    width: 80%;
+                    margin-left: 45px;
+                    margin-top: 30px;
+                }
+                .youtube_control{
+                    position: absolute;
+                    top: 1132px;
+                    border: 1px solid black;
                     width: 80%;
                     margin-left: 45px;
                     margin-top: 30px;
@@ -452,22 +462,49 @@
         <script src="jquery.cycle2.min.js"></script>
         <script>
             var frames = Array(
-                'https://www.youtube.com/embed/fcSaunE4tI4',5,
+                'https://www.youtube.com/embed/fcSaunE4tI4', 5,
                 'https://www.youtube.com/embed/IwKPPIOSYlk', 5,
-                'https://www.youtube.com/embed/jpcLcSe3OlM', 5,
+                'https://www.youtube.com/embed/jpcLcSe3OlM', 5
             );
 
             var i = 0, len = frames.length;
-            function ChangeSrc()
+            var run_cycle = document.getElementById("run_auto").value;
+
+            $('#run_auto').click(function (){
+               $("iframe[name='toggle']").toggle();
+
+            });
+            function turn_by_time()
             {
-                if (i >= len) { i = 0; }
-                document.getElementById('frame').src = frames[i++];
-                setTimeout('ChangeSrc()', (frames[i++]*1000));
+                if ( i >= len ) { i = 0; }
+                document.getElementById('frame1').src = frames[i++];
+                setTimeout('turn_by_time()', (frames[i++]*1000));
             }
-            window.onload = ChangeSrc;
+            window.onload = turn_by_time;
+
+            function turn_by_click()
+            {
+
+                if (i >= len) { i = 0; }
+                document.getElementById('frame2').src = frames[i++];
+                i = document.getElementById("i_click").value;
+
+            }
         </script>
         <div class="youtube">
-            <iframe src="" id="frame" scrolling="no" frameborder="0" width="430px" height="330px"></iframe>
+            <iframe src="" id="frame1" scrolling="no" frameborder="0" width="730px" height="400px"></iframe>
+        </div>
+        <div class="youtube">
+            <iframe src="" id="frame2" scrolling="no" frameborder="0" width="730px" height="400px"></iframe>
+        </div>
+        <div class="youtube_control">
+            <form>
+                <label><input type="checkbox" id="run_auto" value="on" checked>Run in auto</label></br>
+            </form>
+            <form onchange="turn_by_click();">
+                <output name="show_value" for="range" >1</output></br>
+                <input type="range" id="i_click" name="i_click" min="1" max="3" value="1" >
+            </form>
         </div>
 
 
