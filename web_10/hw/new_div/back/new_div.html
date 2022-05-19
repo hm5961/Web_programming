@@ -462,47 +462,60 @@
         <script src="jquery.cycle2.min.js"></script>
         <script>
             var frames = Array(
-                'https://www.youtube.com/embed/fcSaunE4tI4', 5,
-                'https://www.youtube.com/embed/IwKPPIOSYlk', 5,
-                'https://www.youtube.com/embed/jpcLcSe3OlM', 5
+                'https://www.youtube.com/embed/fcSaunE4tI4', 3,
+                'https://www.youtube.com/embed/IwKPPIOSYlk', 3,
+                'https://www.youtube.com/embed/jpcLcSe3OlM', 3
             );
 
             var i = 0, len = frames.length;
-            var run_cycle = document.getElementById("run_auto").value;
 
             $('#run_auto').click(function (){
                $("iframe[name='toggle']").toggle();
 
             });
-            function turn_by_time()
+            function turn_by_auto()
             {
-                if ( i >= len ) { i = 0; }
-                document.getElementById('frame1').src = frames[i++];
-                setTimeout('turn_by_time()', (frames[i++]*1000));
+
+                    if ( i >= len ) { i = 0; }
+                    document.getElementById('frame1').src = frames[i++];
+                    setTimeout('turn_by_auto()', (frames[i++]*1000));
             }
-            window.onload = turn_by_time;
 
-            function turn_by_click()
+            function turn_by_manual()
             {
-
-                if (i >= len) { i = 0; }
-                document.getElementById('frame2').src = frames[i++];
-                i = document.getElementById("i_click").value;
-
+                alert(document.getElementById("i_click").value-1);
+                alert(frames[document.getElementById("i_click").value-1]);
+                document.getElementById('frame2').src = frames[(document.getElementById("i_click").value*2)-1];
+            }
+            function swap_youtube()
+            {
+                var isauto = document.querySelector("input[name='run_by']:checked") == "auto";
+                var ismanual = document.querySelector("input[name='run_by']:checked") == "manual";
+                if(isauto.value == "auto")
+                {
+                    document.getElementById("frame1").style.display = 'block';
+                    document.getElementById("frame2").style.display = 'none';
+                }
+                else if(ismanual.value == "manual")
+                {
+                    document.getElementById("youtube1").style.display = 'none';
+                    document.getElementById("youtube2").style.display = 'block';
+                }
             }
         </script>
-        <div class="youtube">
-            <iframe src="" id="frame1" scrolling="no" frameborder="0" width="730px" height="400px"></iframe>
+        <div class="youtube" id="youtube1">
+            <iframe src="" id="frame1" scrolling="no" frameborder="0" width="730px" height="400px" style="display: block;"></iframe>
         </div>
-        <div class="youtube">
-            <iframe src="" id="frame2" scrolling="no" frameborder="0" width="730px" height="400px"></iframe>
+        <div class="youtube"id="youtube2">
+            <iframe src="" id="frame2" scrolling="no" frameborder="0" width="730px" height="400px" style="display: inline;"></iframe>
         </div>
         <div class="youtube_control">
-            <form>
-                <label><input type="checkbox" id="run_auto" value="on" checked>Run in auto</label></br>
+            <form onchange="swap_youtube()">
+                <label><input type="radio" id="run_auto" value="auto" name="run_by" onclick="turn_by_auto()" checked>Run in auto</label></br>
+                <label><input type="radio" id="run_manual" value="manual" name="run_by" onclick="turn_by_manual()">Run in manual</label></br>
             </form>
-            <form onchange="turn_by_click();">
-                <output name="show_value" for="range" >1</output></br>
+            <form oninput="show_value.value=parseInt(i_click.value);" onchange="turn_by_manual();">
+                <output name="show_value" for="range" style="text-align: center;">1</output></br>
                 <input type="range" id="i_click" name="i_click" min="1" max="3" value="1" >
             </form>
         </div>
