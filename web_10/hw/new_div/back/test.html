@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
+
+<script type="text/javascript">
+
+    var getCycle = function(classVal){
+        $("."+classVal).cycle({
+            fx: 'scrollHorz', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            speed:  'slow',
+            timeout: 1000,
+            autostop: 0,
+            next:   '#next2',
+            prev:   '#prev2',
+            pause:   1
+        });
+    };
+
+    getCycle(goCycle);
+
+</script>
+
+
+
+<div class='goCycle'>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fcSaunE4tI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LyagESZ-oDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hkLWJe2ET_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6QryWGG7RYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/M57GY0vSR5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+</body>
+</html>

@@ -469,10 +469,6 @@
 
             var i = 0, len = frames.length;
 
-            $('#run_auto').click(function (){
-               $("iframe[name='toggle']").toggle();
-
-            });
             function turn_by_auto()
             {
 
@@ -480,23 +476,21 @@
                     document.getElementById('frame1').src = frames[i++];
                     setTimeout('turn_by_auto()', (frames[i++]*1000));
             }
-
+            window.onload = turn_by_auto;
             function turn_by_manual()
             {
-                alert(document.getElementById("i_click").value-1);
-                alert(frames[document.getElementById("i_click").value-1]);
-                document.getElementById('frame2').src = frames[(document.getElementById("i_click").value*2)-1];
+                document.getElementById('frame2').src = frames[(document.getElementById("i_click").value*2)-2];
             }
             function swap_youtube()
             {
                 var isauto = document.querySelector("input[name='run_by']:checked") == "auto";
                 var ismanual = document.querySelector("input[name='run_by']:checked") == "manual";
-                if(isauto.value == "auto")
+                if(isauto == "auto")
                 {
                     document.getElementById("frame1").style.display = 'block';
                     document.getElementById("frame2").style.display = 'none';
                 }
-                else if(ismanual.value == "manual")
+                else if(ismanual == "manual")
                 {
                     document.getElementById("youtube1").style.display = 'none';
                     document.getElementById("youtube2").style.display = 'block';
@@ -506,13 +500,13 @@
         <div class="youtube" id="youtube1">
             <iframe src="" id="frame1" scrolling="no" frameborder="0" width="730px" height="400px" style="display: block;"></iframe>
         </div>
-        <div class="youtube"id="youtube2">
+        <div class="youtube"id="youtube2" style="display: none;">
             <iframe src="" id="frame2" scrolling="no" frameborder="0" width="730px" height="400px" style="display: inline;"></iframe>
         </div>
         <div class="youtube_control">
             <form onchange="swap_youtube()">
-                <label><input type="radio" id="run_auto" value="auto" name="run_by" onclick="turn_by_auto()" checked>Run in auto</label></br>
-                <label><input type="radio" id="run_manual" value="manual" name="run_by" onclick="turn_by_manual()">Run in manual</label></br>
+                <label><input type="radio" id="run_auto" value="auto" name="run_by" onclick="turn_by_auto(); swap_youtube();" checked>Run in auto</label></br>
+                <label><input type="radio" id="run_manual" value="manual" name="run_by" onclick="turn_by_manual(); swap_youtube();">Run in manual</label></br>
             </form>
             <form oninput="show_value.value=parseInt(i_click.value);" onchange="turn_by_manual();">
                 <output name="show_value" for="range" style="text-align: center;">1</output></br>
