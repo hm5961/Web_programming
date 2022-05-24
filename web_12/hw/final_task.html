@@ -67,31 +67,58 @@
 
         <div class="col-sm-4">
             <h4>Hyeonmin Kim</h4>
-            <button type="button" class="btn btn-circle btn-xl">
-                <img src="teammember.jpg" class="img-circle">
-            </button>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <img src="teammember.jpg" class="img-circle" data-toggle="collapse" data-target="#mem1">
+            <p></p>
+            <div id="mem1" class="collapse">
+                Hey, I am hidden content. I am shown only when tou collapse the button.
+            </div>
         </div>
         <div class="col-sm-4">
             <h4>2018038036</h4>
-            <img src="teammember.jpg" class="img-circle">
-            <p>Lorem ipsum dolor sit amet..</p>
+            <img src="teammember.jpg" class="img-circle" data-toggle="collapse" data-target="#mem2">
+            <p></p>
+            <div id="mem2" class="collapse">
+                Hey, I am hidden content. I am shown only when tou collapse the button.
+            </div>
         </div>
         <div class="col-sm-4">
             <h4>hm5961</h4>
-            <img src="teammember.jpg" class="img-circle">
-            <p>Lorem ipsum dolor sit amet..</p>
+            <img src="teammember.jpg" class="img-circle" data-toggle="collapse" data-target="#mem3">
+            <p></p>
+            <div id="mem3" class="collapse">
+                Hey, I am hidden content. I am shown only when tou collapse the button.
+            </div>
         </div>
     </form>
 </div>
-<div class="container">
-    <h2>Simple Collapsible</h2>
-    <p>Click on the button to toggle between showing and hiding content.</p>
-    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-    <div id="demo" class="collapse">
-        Hey, I am hidden content. I am shown only when tou collapse the button.
+<nav class="navbar navbar-default">
+    <div class = "container-fluid">
+        <div class = "navbar-header">
+            <a class=""navbar-brand href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+
+    <div class="inline col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p class="glyphicon glyphicon-map-marker icon"> Cheongju, South Korea</p></br>
+        <p class="glyphicon glyphicon-phone icon"> +00 1515151515</p></br>
+        <p class="glyphicon glyphicon-envelope icon"> myemail@something.com</p></br>
+    </div>
+    <div class="inline col-sm-7">
+        <h3>CONTACT</h3>
+        <input type="text" placeholder="Name" class="col-sm-6" style="margin: 20px;">
+        <input type="email" placeholder="Email" class="col-sm-6"></br>
+        <input type="text" placeholder="Comment" class="col-sm-12 row-sm-6"></br>
+        <input type="submit" value="Send" class="col-sm-6">
     </div>
 </div>
-
 </body>
 </html>
