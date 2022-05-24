@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        #heading{
+            background-color: #f4511e;
+            color: #ffffff;
+            padding: 80px;
+        }
+        #functionalities{
+            padding: 80px;
+        }
+
+        #our_team{
+            padding: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid text-center" id="heading">
+    <h1>Your Project Name</h1>
+    <p>Leave your email if you are interested in our project</p>
+
+    <form class="form-inline">
+
+        <div class="form-group">
+            <input type="address" class="form-control" id="address" placeholder="Enter Address" name="address">
+        </div>
+        <button type="submit" class="btn btn-danger" id="Subscribe">Subscribe</button>
+    </form>
+</div>
+<div class="container-fluid text-center" id="functionalities">
+    <h3>Functionalities</h3>
+    <p>What we offer</p>
+    <form class="row">
+
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-off icon" style="color: #f4511e; font-size: 50px; margin: 20px;"></span>
+            <h4>AVAILABILITY</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-wrench icon" style="color: #f4511e; font-size: 50px; margin: 20px;"></span>
+            <h4>DEBUGGING</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-lock icon" style="color: #f4511e; font-size: 50px; margin: 20px;"></span>
+            <h4>SECURITY</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+    </form>
+</div>
+
+<div class="container-fluid text-center" id="our_team">
+    <h3>Our Team</h3>
+    <p>Introducing our team with a lot of passion</p>
+    <form class="row">
+
+        <div class="col-sm-4">
+            <h4>Hyeonmin Kim</h4>
+            <button type="button" class="btn btn-circle btn-xl">
+                <img src="teammember.jpg" class="img-circle">
+            </button>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>2018038036</h4>
+            <img src="teammember.jpg" class="img-circle">
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>hm5961</h4>
+            <img src="teammember.jpg" class="img-circle">
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h2>Simple Collapsible</h2>
+    <p>Click on the button to toggle between showing and hiding content.</p>
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+    <div id="demo" class="collapse">
+        Hey, I am hidden content. I am shown only when tou collapse the button.
+    </div>
+</div>
+
+</body>
+</html>

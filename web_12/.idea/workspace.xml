@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b340f388-8787-4fd2-83f3-6a0bdea03d1c" name="변경" comment="" />
+    <list default="true" id="b6700d4d-ed75-46c5-bd37-b62317278081" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,54 +10,50 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="29HTjyLum3jL4LqfkkgfyxlyLQu" />
+  <component name="ProjectId" id="29Xx95i9pFueU4DkdTfekv3oIgq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web_project" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="b340f388-8787-4fd2-83f3-6a0bdea03d1c" name="변경" comment="" />
-      <created>1652769150384</created>
+      <changelist id="b6700d4d-ed75-46c5-bd37-b62317278081" name="변경" comment="" />
+      <created>1653273086344</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652769150384</updated>
-      <workItem from="1652769153748" duration="1016000" />
-      <workItem from="1652846413174" duration="2145000" />
-      <workItem from="1652856790757" duration="25000" />
-      <workItem from="1652922109309" duration="2575000" />
-      <workItem from="1652949509432" duration="42000" />
-      <workItem from="1652950054805" duration="4253000" />
-      <workItem from="1653004681142" duration="5210000" />
+      <updated>1653273086344</updated>
+      <workItem from="1653273089774" duration="720000" />
+      <workItem from="1653273856786" duration="10166000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/web_10/hw/new_div/back/new_div.html</url>
-          <line>462</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

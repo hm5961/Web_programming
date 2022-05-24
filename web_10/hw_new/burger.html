@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #left_content{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        #center_content{
+            position: absolute;
+            left: 500px;
+            top: 0px;
+        }
+        #right_content{
+            position: absolute;
+            left: 1000px;
+            top: 0px;
+        }
+        body{
+            margin: 0px;
+            background-color: gray;
+        }
+        #fomula{
+            position: relative;
+            left: 30px;
+        }
+        #calc1{
+            position: relative;
+            margin: 30px;
+        }
+        #calc1_left{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #calc1_right{
+            display: inline-block;
+        }
+        #calc2{
+            position: relative;
+            margin: 30px;
+        }
+        #calc2_left{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #calc2_right{
+            display: inline-block;
+        }
+        #map1{
+            border: 3px solid black;
+        }
+        #map2{
+            border: 3px solid black;
+        }
+        #map3{
+            border: 3px solid black;
+        }
+        .header{
+            background-color: yellowgreen;
+            width: 100%;
+            height: 100px;
+        }
+        .menubar{
+            background-color: slateblue;
+            width: 100%;
+            height: 100px;
+        }
+        #submit{
+            background-color: gray;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 1000px;
+        }
+
+        .cycle-slideshow{
+            border: 1px solid black;
+            position: absolute;
+            top: 300px;
+            left: 2050px;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="back/jquery.cycle2.js"></script>
+    <script src="back/jquery.cycle2.center.js"></script>
+</head>
+<body>
+<!--<div class = "header">-->
+<!--    <h1>Burger Indices Calculator by Google Map</h1>-->
+<!--    <p></p>-->
+<!--</div>-->
+<!--<div class = "menubar">-->
+<!--</div>-->
+
+<div class = "content">
+    <!--    <h1>1. 도시발전지수 2. 버거지수 3. 일치도</h1>-->
+    <div id="left_content">
+        <div id="map1" style="width:500px; height: 800px"></div>
+        <div id="calc1">
+            <div id="calc1_left">
+                <form oninput="show_value.value=parseInt(population.value);" onchange="show_fomula(); myMap();">
+                    <label for="population">인구수 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="population" name="population" min="0" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(household.value);" onchange="show_fomula(); myMap();">
+                    <label for="household">세대수 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="household" name="household" min="0" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(GRDP.value);" onchange="show_fomula(); myMap();">
+                    <label for="GRDP">지역 내 총 생산 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="GRDP" name="GRDP" min="0" max="100" value="0" >
+                </form>
+            </div>
+            <div id="calc1_right">
+                <form oninput="show_value.value=parseInt(GNI_per_person.value);" onchange="show_fomula(); myMap();">
+                    <label for="GNI_per_person">개인소득 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="GNI_per_person" name="GNI_per_person" min="0" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(consumption_per_citizen.value);" onchange="show_fomula(); myMap();">
+                    <label for="consumption_per_citizen">민간소비 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="consumption_per_citizen" name="consumption_per_citizen" min="0" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(GNI_per_region.value);" onchange="show_fomula(); myMap();">
+                    <label for="GNI_per_region">지역 총 소득 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="GNI_per_region" name="GNI_per_region" min="0" max="100" value="0" >
+                </form>
+            </div>
+            <form oninput="show_value.value=parseInt(rad1_size.value)/50;" onchange="show_fomula(); myMap();">
+                <label for="rad1_size">반지름 배율 : </label>
+                <output name="show_value" for="range" >1</output><font>배율</font></br>
+                <input type="range" id="rad1_size" name="rad1_size" min="5" max="500" value="50" >
+            </form>
+        </div>
+        <div id="fomula">
+            <p><b>현재 공식 : </b></p>
+            <p id="show_fomula_left"> </p>
+            <p id="show_fomula_right"> </p>
+        </div>
+    </div>
+    <div id="center_content">
+        <div id="map2" style="width:500px; height: 800px"></div>
+
+        <div id="calc2" >
+            <div id="calc2_left">
+                <form oninput="show_value.value=parseInt(burgerking.value);" onchange="show_fomula(); myMap();">
+                    <label for="burgerking">버거킹 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="burgerking" name="burgerking" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(mcdonald.value);" onchange="show_fomula(); myMap();">
+                    <label for="mcdonald">맥도날드 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="mcdonald" name="mcdonald" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(lotteria.value);" onchange="show_fomula(); myMap();">
+                    <label for="lotteria">롯데리아 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="lotteria" name="lotteria" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(moms_touch.value);" onchange="show_fomula(); myMap();">
+                    <label for="moms_touch">맘스터치 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="moms_touch" name="moms_touch" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(rad2_size.value)/50;" onchange="show_fomula(); myMap();">
+                    <label for="rad1_size">반지름 배율(+) : </label>
+                    <output name="show_value" for="range" >1</output><font>배율</font></br>
+                    <input type="range" id="rad2_size" name="rad2_size" min="5" max="500" value="50" >
+                </form>
+            </div>
+            <div id="calc2_right">
+                <form oninput="show_value.value=parseInt(KFC.value);" onchange="show_fomula(); myMap();">
+                    <label for="KFC">KFC : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="KFC" name="KFC" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(subway.value);" onchange="show_fomula(); myMap();">
+                    <label for="subway">서브웨이 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="subway" name="subway" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(ufo_burger.value);" onchange="show_fomula(); myMap();">
+                    <label for="ufo_burger">UFO버거 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="ufo_burger" name="ufo_burger" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(nobrand_burger.value);" onchange="show_fomula(); myMap();">
+                    <label for="nobrand_burger">노브랜드 버거 : </label>
+                    <output name="show_value" for="range" >0</output><font>%</font></br>
+                    <input type="range" id="nobrand_burger" name="nobrand_burger" min="-100" max="100" value="0" >
+                </form>
+                <form oninput="show_value.value=parseInt(rad3_size.value)/50;" onchange="show_fomula(); myMap();">
+                    <label for="rad1_size">반지름 배율(-) : </label>
+                    <output name="show_value" for="range" >1</output><font>배율</font></br>
+                    <input type="range" id="rad3_size" name="rad3_size" min="5" max="500" value="50" >
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div id="right_content">
+        <div id="map3" style="width:1000px; height: 1200px"></div>
+    </div>
+    <div id="ads">
+
+
+
+        <div class="cycle-slideshow"
+             data-cycle-fx=scrollVert
+             data-cycle-pause-on-hover="true"
+             data-cycle-timeout=4000
+             data-cycle-speed="200"
+             data-cycle-center-horz=true
+             data-cycle-center-vert=true
+        >
+            <img src="back/burger1.png">
+            <img src="back/burger2.png">
+            <img src="back/burger3.png">
+            <img src="back/burger4.png">
+            <img src="back/burger5.png">
+        </div>
+
+    </div>
+</div>
+</div>
+<div class= "footer"></div>
+<script>
+    var	regional_development_indices	=	[
+        [	18.4144	,	6.474204	,	4.610293	,	5.724186	,	2.785117	,	2.809237	,	2.165432	,	0.733042	,	26.31732	,	2.983056	,	3.095952	,	4.107747	,	3.4517	,	3.544206	,	5.073497	,	6.3976	,	1.313003	]	,	//인구
+        [	18.86391	,	6.575882	,	4.528123	,	5.541652	,	2.746541	,	2.830996	,	2.052077	,	0.665916	,	24.89763	,	3.182246	,	3.247822	,	4.273405	,	3.607921	,	3.839016	,	5.431393	,	6.40573	,	1.309738	]	,	//세대
+        [	7.285678	,	4.403687	,	3.830341	,	4.893521	,	4.459898	,	4.638165	,	10.08175	,	5.793692	,	5.816176	,	5.162529	,	6.933961	,	8.360903	,	4.690361	,	7.033534	,	6.416825	,	5.392188	,	4.806797	]	,	//지역 내 총 생산
+        [	6.899357	,	5.820152	,	5.70831	,	5.73155	,	6.074339	,	6.078696	,	6.69746	,	5.952329	,	6.046741	,	5.695237	,	5.612445	,	5.658925	,	5.628422	,	5.637137	,	5.552893	,	5.59211	,	5.613897	]	,	//개인 소득
+        [	7.494963	,	6.15577	,	6.089766	,	5.638157	,	6.199194	,	6.187035	,	6.286042	,	5.686792	,	5.921281	,	5.728479	,	5.375877	,	5.429723	,	5.464462	,	5.507886	,	5.487042	,	5.594734	,	5.752796	]	,	//민간 소비
+        [	8.139709	,	4.913661	,	4.636142	,	5.407861	,	5.180345	,	5.273685	,	8.941429	,	6.217081	,	6.44793	,	4.857824	,	5.857891	,	6.85379	,	4.824488	,	6.20458	,	5.862057	,	5.306187	,	5.075338	]		//지역 총 소득
+    ]	;
+
+    var	burger_indices	=	[
+        [	24.94331	,	6.575964	,	4.761905	,	5.21542	,	3.628118	,	3.401361	,	2.040816	,	1.360544	,	24.03628	,	2.040816	,	2.721088	,	2.040816	,	3.401361	,	1.587302	,	6.122449	,	5.895692	,	0.226757	]	,	//버거킹
+        [	23.45679	,	10.12346	,	6.17284	,	4.444444	,	2.469136	,	2.962963	,	2.469136	,	0	,	24.19753	,	1.728395	,	1.975309	,	2.469136	,	2.716049	,	1.975309	,	3.703704	,	7.160494	,	1.975309	]	,	//맥도날드
+        [	13.58696	,	6.13354	,	4.891304	,	5.512422	,	3.726708	,	3.649068	,	2.406832	,	0.931677	,	24.76708	,	3.881988	,	4.425466	,	5.124224	,	3.959627	,	3.959627	,	5.279503	,	6.677019	,	1.086957	]	,	//롯데리아
+        [	37.82383	,	4.663212	,	5.181347	,	6.217617	,	2.072539	,	2.590674	,	1.036269	,	0.518135	,	26.94301	,	1.554404	,	2.072539	,	2.590674	,	0.518135	,	1.036269	,	2.072539	,	2.072539	,	1.036269	]	,	//kfc
+        [	32.85714	,	8.979592	,	4.285714	,	5.102041	,	3.061224	,	4.489796	,	2.653061	,	0.408163	,	24.28571	,	0	,	0.612245	,	3.265306	,	1.020408	,	0.612245	,	1.020408	,	6.734694	,	0.612245	]	,	//서브웨이
+        [	10.5625	,	6.8125	,	4.0625	,	10.5625	,	1.75	,	2.6875	,	10.5625	,	0.9375	,	19.375	,	3.5625	,	3.6875	,	4.5625	,	2.1875	,	4.5625	,	4.8125	,	7.5	,	1.8125	]	,	//맘스터치
+        [	14.28571	,	4.761905	,	0	,	14.28571	,	0	,	4.761905	,	0	,	0	,	42.85714	,	0	,	4.761905	,	0	,	0	,	4.761905	,	4.761905	,	4.761905	,	0	]	,	//ufo
+        [	27.92208	,	7.792208	,	10.38961	,	9.74026	,	0	,	0	,	1.948052	,	0	,	31.16883	,	0	,	0	,	0	,	0	,	0	,	6.493506	,	4.545455	,	0	]		//노브랜드
+    ]	;
+
+    var location_info = [
+        [         36.244125   ,   127.789637      ,   '대한민국'           ,   'back/ROK.png'   ]   ,
+        [         37.540705   ,   126.956764      ,   '서울'       ,   'back/seoul.png'   ]   ,
+        [         35.198362   ,   129.053922      ,   '부산'       ,   'back/busan.png'   ]   ,
+        [         35.798838   ,   128.583052      ,   '대구'       ,   'back/daegu.png'   ]   ,
+        [         37.469221   ,   126.573234      ,   '인천'       ,   'back/incheon.png'   ]   ,
+        [         35.126033   ,   126.831302      ,   '광주'       ,   'back/gwangju.png'   ]   ,
+        [         36.321655   ,   127.378953      ,   '대전'       ,   'back/daejeon.png'   ]   ,
+        [         35.519301   ,   129.239078      ,   '울산'       ,   'back/ulsan.jpg'   ]   ,
+        [         36.600000   ,   127.266667      ,   '세종'       ,   'back/sejong.png'   ]   ,
+        [         37.567167   ,   127.690292      ,   '경기'   ,   'back/gyeonggi.png'   ]   ,
+        [         37.555837   ,   128.809315      ,   '강원'       ,   'back/gangwon.png'   ]   ,
+        [         36.628503   ,   127.929344      ,   '충북'   ,   'back/chung-buk.png'   ]   ,
+        [         36.67229   ,   126.379757      ,   '충남'   ,   'back/chung-nam.png'   ]   ,
+        [         35.716705   ,   127.144185      ,   '전북'   ,   'back/jeon-buk.png'   ]   ,
+        [         34.619400   ,   126.393113      ,   '전남'   ,   'back/jeon-nam.jpg'   ]   ,
+        [         36.748647   ,   128.664734      ,   '경북'   ,   'back/gyeong-buk.png'   ]   ,
+        [         35.259787   ,   128.364734      ,   '경남'   ,   'back/gyeong-nam.png'   ]   ,
+        [         33.364805   ,   126.542671      ,   '제주'       ,   'back/jeju.png'   ]
+    ];
+
+    var compare_rad = [
+        [],
+        []
+    ];
+    function show_fomula() {
+        var develop = ["인구수", "세대수", "지역 내 총 생산", "개인 소득", "민간 소비", "지역 총 소득"];
+        var burger = ["버거킹", "맥도날드", "롯데리아", "맘스터치", "KFC", "서브웨이", "UFO버거", "노브랜드버거"];
+        var dev_num = [
+            document.getElementById("population").value,
+            document.getElementById("household").value,
+            document.getElementById("GRDP").value,
+            document.getElementById("GNI_per_person").value,
+            document.getElementById("consumption_per_citizen").value,
+            document.getElementById("GNI_per_region").value,
+            document.getElementById("rad1_size").value
+        ];
+        var bur_num = [
+            document.getElementById("burgerking").value,
+            document.getElementById("mcdonald").value,
+            document.getElementById("lotteria").value,
+            document.getElementById("moms_touch").value,
+            document.getElementById("KFC").value,
+            document.getElementById("subway").value,
+            document.getElementById("ufo_burger").value,
+            document.getElementById("nobrand_burger").value
+        ];
+        var combine_lv =[];
+        var combine_rv =[];
+        var combine_rv_sub =[];
+        let rvcnt = 0, rvsubcnt = 0, lvcnt = 0;
+        for(i = 0; i<8; i++)
+        {
+            if(bur_num[i]<0)
+            {
+                if(bur_num[i]/100 == 1)
+                    combine_rv_sub[rvsubcnt] = burger[i];
+                else
+                    combine_rv_sub[rvsubcnt] = bur_num[i]/-100 + " * " + burger[i];
+                rvsubcnt++;
+            }
+            else if(bur_num[i]>0)
+            {
+                if(bur_num[i]/100 == 1)
+                    combine_rv[rvcnt] = burger[i];
+
+                else
+                    combine_rv[rvcnt] = bur_num[i]/100 + " * " + burger[i];
+                rvcnt++;
+            }
+        }
+        for(i = 0; i<6; i++)
+        {
+            if(dev_num[i]>0)
+            {
+                if(dev_num[i]/100 == 1)
+                    combine_lv[lvcnt] = develop[i];
+                else
+                    combine_lv[lvcnt] = dev_num[i]/100 + " * " + develop[i];
+                lvcnt++;
+            }
+        }
+
+        if(document.getElementById("rad3_size").value/50 == 1)
+            var res_rs = " ( " + combine_rv_sub.join(' + ') + " )";
+        else
+            var res_rs = " ( ( " + combine_rv_sub.join(' + ') + " ) * " + document.getElementById('rad3_size').value/50 +" )";
+
+        if(document.getElementById("rad2_size").value/50 == 1)
+            var res_r = " ( " + combine_rv.join(' + ') + " )";
+        else
+            var res_r = " ( ( " + combine_rv.join(' + ') + " ) * " + document.getElementById('rad2_size').value/50 +" )";
+
+        if(document.getElementById("rad1_size").value/50 == 1)
+            var res_l = " ( " + combine_lv.join(' + ') + " )";
+        else
+            var res_l = " ( ( " + combine_lv.join(' + ') + " ) * " + document.getElementById('rad1_size').value/50 +" )";
+
+        var outl ="", outr="";
+        if(lvcnt>0)
+            outl += res_l;
+        if((rvcnt>0||rvsubcnt>0) && lvcnt>0)
+            outl +=  " : ";
+
+
+        if(rvcnt>0)
+            outr += res_r;
+        if(rvsubcnt>0 && rvcnt == 0)
+            outr += "1 + / ";
+        else if(rvsubcnt>0 && rvcnt > 0)
+            outr += " / ";
+        if(rvsubcnt>0)
+            outr += res_rs;
+
+        document.getElementById("show_fomula_left").innerText = outl;
+        document.getElementById("show_fomula_right").innerText = outr;
+    };
+
+    function myMap() {
+        var mapCanvas1 = document.getElementById("map1");
+        var mapCanvas2 = document.getElementById("map2");
+        var mapCanvas3 = document.getElementById("map3");
+
+        var location =[];
+        for(let i = 0; i<location_info.length; i++)
+        {
+            location[i] = new google.maps.LatLng(location_info[i][0],location_info[i][1]);
+        }
+        var mapOptions = {
+            center: location[0],
+            zoom: 7.2
+        };
+        var mapOptions2 = {
+            center: location[0],
+            zoom: 8
+        };
+        var map1 = new google.maps.Map(mapCanvas1, mapOptions);
+        var map2 = new google.maps.Map(mapCanvas2, mapOptions);
+        var map3 = new google.maps.Map(mapCanvas3, mapOptions2);
+
+
+        var percentage1 =
+            [
+                document.getElementById("population").value,
+                document.getElementById("household").value,
+                document.getElementById("GRDP").value,
+                document.getElementById("GNI_per_person").value,
+                document.getElementById("consumption_per_citizen").value,
+                document.getElementById("GNI_per_region").value
+            ];
+
+        for (j = 1; j<19; j++) {
+
+            let rad = 0;
+            let percentage_cnt = 0;
+            for(i = 0;i<6;i++) {
+                percentage_cnt += percentage1[i];
+                rad += (percentage1[i] * regional_development_indices[i][j-1] * document.getElementById("rad1_size").value) ;
+            }
+            compare_rad[0][j-1] = rad;
+
+            var region = new google.maps.Circle({
+                center: location[j],
+                radius: rad,
+                strokeColor: "#57FF55",
+                strokeOpacity: 0.5,
+                strokeWeight: 3,
+                fillColor: "#57FF55",
+                fillOpacity: 0.1
+            });
+            region.setMap(map1);
+        }
+        var percentage2 =
+            [
+                document.getElementById("burgerking").value,
+                document.getElementById("mcdonald").value,
+                document.getElementById("lotteria").value,
+                document.getElementById("KFC").value,
+                document.getElementById("subway").value,
+                document.getElementById("moms_touch").value,
+                document.getElementById("ufo_burger").value,
+                document.getElementById("nobrand_burger").value
+            ];
+
+        for (j = 1; j<19; j++) {
+
+            let rad_pos = 0, rad_min=0;
+            let percentage_cnt = 0;
+            for(i = 0;i<8;i++) {
+                percentage_cnt += percentage2[i];
+                if(percentage2[i] < 0)
+                    rad_min += (-1*percentage2[i] * burger_indices[i][j-1] * document.getElementById("rad3_size").value);
+                else
+                    rad_pos += (percentage2[i] * burger_indices[i][j-1] * document.getElementById("rad2_size").value);
+            }
+            if(rad_min !=0)
+                compare_rad[1][j-1] = rad_pos/rad_min;
+            else
+                compare_rad[1][j-1] = rad_pos;
+
+            if(compare_rad[1][j-1] <0)
+                compare_rad *= -1;
+
+            var region = new google.maps.Circle({
+                center: location[j],
+                radius: compare_rad[1][j-1],
+                strokeColor: "#FFFF57",
+                strokeOpacity: 0.5,
+                strokeWeight: 3,
+                fillColor: "#FFFF57",
+                fillOpacity: 0.1
+            });
+            region.setMap(map2);
+        }
+
+        for (j = 1; j<19; j++) {
+
+            let rad = 0;
+            let color = "";
+            //FF5755
+            rad = compare_rad[0][j - 1] - compare_rad[1][j - 1];
+            if (rad < 0)
+            {
+                rad *= -1;
+                color = "#5557FF";
+            }
+            else
+            {
+                color = "#FF5755";
+            }
+
+            var region = new google.maps.Circle({
+                center: location[j],
+                radius: rad,
+                strokeColor: color,
+                strokeOpacity: 0.5,
+                strokeWeight: 3,
+                fillColor: color,
+                fillOpacity: 0.5
+            });
+            region.setMap(map3);
+            var marker = new google.maps.Marker({
+                position: location[j],
+                map: map3
+            });
+
+                var infowindow = new google.maps.InfoWindow({
+                    content:
+                        "<p><img src ='" + location_info[j]["3"] + "'>"+ location_info[j]["2"] +  "</p>" +
+                        "<p style = 'color:" + color + "'>" + Math.round(rad) + "</p>"
+
+                });
+
+
+            infowindow.open(map3,marker);
+        }
+        show_fomula()
+    };
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=myMap"></script>
+</body>
+</html>
