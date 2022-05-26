@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b340f388-8787-4fd2-83f3-6a0bdea03d1c" name="변경" comment="" />
+    <list default="true" id="b340f388-8787-4fd2-83f3-6a0bdea03d1c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_12/hw/final_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_12/hw/final_task.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -42,6 +45,8 @@
       <workItem from="1652949509432" duration="42000" />
       <workItem from="1652950054805" duration="4253000" />
       <workItem from="1653004681142" duration="5210000" />
+      <workItem from="1653390255888" duration="733000" />
+      <workItem from="1653604587556" duration="2449000" />
     </task>
     <servers />
   </component>
@@ -53,8 +58,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web_10/hw/new_div/back/new_div.html</url>
-          <line>462</line>
-          <properties lambdaOrdinal="-1" />
+          <line>461</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

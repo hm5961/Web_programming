@@ -21,10 +21,31 @@
 
         #our_team{
             padding: 80px;
+            background-color: #eeeeee;
+        }
+        #contact{
+            padding: 80px;
+            background-color: #eeeeee;
         }
     </style>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+    <div class = "container-fluid">
+        <div class = "navbar-header">
+            <a class="navbar-brand" href="#">Your Project</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#heading">About</a></li>
+            <li><a href="#functionalities">Functionalities</a></li>
+            <li><a href="#our_team">Team</a></li>
+            <li><a href="#price">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container-fluid text-center" id="heading">
     <h1>Your Project Name</h1>
     <p>Leave your email if you are interested in our project</p>
@@ -91,20 +112,37 @@
         </div>
     </form>
 </div>
-<nav class="navbar navbar-default">
-    <div class = "container-fluid">
-        <div class = "navbar-header">
-            <a class=""navbar-brand href="#">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="container-fluid">
+<div class="container-fluid text-center bg-4" id = "price" >
+    <h3>Our Price</h3>
+    <p>We offer flexible pricing for our clients</p>
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Hyeonmin</td>
+            <td>Kim</td>
+            <td>hm169511@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2018038</td>
+            <td>036</td>
+            <td>2018038036@cbnu.ac.kr</td>
+        </tr>
+        <tr>
+            <td>hm</td>
+            <td>5961</td>
+            <td>hm5961@naver.com</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container-fluid" id = "contact">
 
     <div class="inline col-sm-5 container">
         <p>Contact us and we'll get back to you within 24 hours.</p>
@@ -140,6 +178,7 @@
         </div>
     </div>
 </div>
+
 </div>
 </body>
 </html>
